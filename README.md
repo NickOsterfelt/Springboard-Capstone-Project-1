@@ -8,4 +8,4 @@ A stock trading game part of Springboard's Carreer Track Software Development pr
 <em>Made using dbdesigner.net</em>
 
 ## API:
-Quandl: https://www.quandl.com/databases/WIKIP/documentation
+Yahoo finance rapid-api: https://rapidapi.com/apidojo/api/yahoo-finance1
