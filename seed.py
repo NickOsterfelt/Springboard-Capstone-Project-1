@@ -27,21 +27,11 @@ db.session.commit()
 s = Stock.query.get(1)
 
 #users
-u = User()
-u.current_money = 1000
-u.username = "test1"
-u.signup("test1", "123456")
+u = User.signup("test1", "123456")
 
-db.session.add(u)
-db.session.commit()
-
-u1 = User()
-u1.current_money = 1000
-u1.username = "test2"
-u1.signup("test2", "123456")
+u1 = User.signup("test2", "123456")
 
 
-db.session.add(u1)
 db.session.commit()
 
 #owned stocks
