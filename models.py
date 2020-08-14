@@ -136,12 +136,12 @@ class User(db.Model):
         db.Float
     )
 
-    # owned_stocks = db.relationship(         #join Owned_stocks table instead with user id to get                                      
-    #     "Stock",                                #user owned stocks
-    #     secondary="owned_stocks",
-    #     primaryjoin=(id == Owned_Stock.stock_id),
-    #     backref="owned_by"
-    # )
+    owned_stocks = db.relationship(         #join Owned_stocks table instead with user id to get                                      
+        "Stock",                                #user owned stocks
+        secondary="owned_stocks",
+        primaryjoin=(id == Owned_Stock.stock_id),
+        backref="owned_by"
+    )
 
     user_transactions = db.relationship(            #TODO rewrite as Transactions @classmethod with joins.
         "Transaction",
