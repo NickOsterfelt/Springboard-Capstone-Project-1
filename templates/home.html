@@ -1,0 +1,53 @@
+{% extends 'base-home.html' %}
+{% block content %}
+<h2 class="display-5 px-2 text-align-center pb-3" id="section-header">Portfolio Summary</h2>
+<div class="row">
+  <div class="col-8">
+    <div class="container-fluid" id="home-section">
+      <h5 class="display-5" id="section-header">Owned Stocks:</h5>
+      <hr>
+      <div class="stock-list">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Symbol</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for stock in owned_stocks %}
+            <tr>
+              <th scope="row"><a href="/stocks/{{stock.id}}">{{stock.name}}</a></th>
+              <td>{{stock.stock_symbol}}</td>
+              <td>{{stock.share_price}}</td>
+              <td>{{stock.stock_symbol}}</td>
+              <td>{{stock.share_price}}</td>
+            </tr>
+            {% endfor%}
+          </tbody>
+        </table>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="col-4">
+    <div class="container-fluid" id="home-section">
+      <h5 class="display-5" id="section-header">Overview:</h5>
+      <hr>
+      <div class="stock-list">
+        <table class="table table-striped">
+          
+
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

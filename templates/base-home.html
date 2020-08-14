@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    {% block links %}{% endblock %}
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+    <title>Stock-app</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-center">
+        <a class="navbar-brand nav-header d-flex" href="#">
+            <div class="image-wrapper d-flex justify-content-center text-align-center">
+                <img src="{{g.user.image_url}}" alt="" class=profile-pic>
+                <p>{{g.user.username}}</p>
+            </div> 
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Search Stocks</a>
+            <a class="nav-item nav-link" href="#">Manage Portfolio</a>
+            <a class="nav-item nav-link" href="#">Account</a>
+          </div>
+        </div>
+      </nav>
+      
+    {% for category, message in get_flashed_messages(with_categories=True) %}
+    <div class="alert {{ category }}">
+        <span class="text-danger" id="close-message-x">&times;</span>
+        {{ message }}
+    </div>
+      {% endfor %}
+
+    <div class="container p-5 {% block page_class %}{% endblock %}">
+        
+
+        {% block content %}
+
+        {% endblock %}
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
