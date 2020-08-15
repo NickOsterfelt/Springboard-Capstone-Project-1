@@ -3,3 +3,9 @@ hr{
     border-color: #fff;
     width: 100%;
 }
+#summary {
+    text-indent: 50px;
+}
+.hidden{
+    display: None;
+}

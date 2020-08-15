@@ -6,6 +6,8 @@ from os import environ
 import requests
 import json
 
+from secrets import keys
+
 bcrypt = Bcrypt()
 db = SQLAlchemy()
 
@@ -13,7 +15,7 @@ URL = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/get-detail"
 
 HEADERS = {
     'x-rapidapi-host': "apidojo-yahoo-finance-v1.p.rapidapi.com",
-    'x-rapidapi-key': environ.get("RAPID_API_KEY")
+    'x-rapidapi-key': keys["rapid_api"]
 }
 
 
@@ -220,7 +222,11 @@ class Stock(db.Model):
         nullable=False,
         unique=True
     )
-
+    data = db.Column(
+        db.JSON,
+        nullable=False,
+        default={}
+    )
     share_price = db.Column(
         db.Float
     )
@@ -254,12 +260,14 @@ class Stock(db.Model):
         s.share_price = price
         s.last_updated = datetime.now()
 
+        json_dict = clean_empty(json_dict)
+        s.data=json_dict
+
         db.session.add(s)
         db.session.commit()
 
-        if all_data:
-            json_dict = clean_empty(json_dict)
-            return json_dict
+        
+
         
         return True
 

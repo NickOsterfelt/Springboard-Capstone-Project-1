@@ -4,12 +4,14 @@ from sqlalchemy.exc import IntegrityError
 
 from os import environ
 import datetime
+import json
 
 from flask import request
 import requests
 
 from models import db, connect_db, User, Stock, Owned_Stock, Transaction
 from forms import LoginSignupForm
+from secrets import keys
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///stocks-app'
@@ -21,11 +23,12 @@ db.create_all()
 
 CURR_USER_KEY = "curr_user"
 
-app.config['SECRET_KEY'] = environ.get('SECRET_KEY')
+app.config['SECRET_KEY'] = keys['flask_debug']
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
 debug = DebugToolbarExtension(app)
 
+#********************** USER ROUTES ******************************
 @app.before_request
 def add_user_to_g():
     """If we're logged in, add curr user to Flask global."""
@@ -103,6 +106,17 @@ def login():
         return redirect('/login')
 
     return render_template('users/login.html', form = form)
+
+@app.route('/logout')
+def logout():
+    """Do Logout"""
+    if g.user:
+        flash("See you later! Logout Successful.", "success")
+        do_logout()
+    
+    return redirect('/')
+
+#********************************** STOCK ROUTES ****************************************
 @app.route('/stocks')
 def show_stocks():
     if g.user:
@@ -114,9 +128,11 @@ def show_stocks():
 def show_stock(stock_id):
     if g.user:
         stock = Stock.query.get(stock_id)
-        #data = Stock.get_update(stock_id, True)
-        data = {"test":{}}
-        if not data:                                   #WARNING CALLS API ENEABLE LATER
+        #data = Stock.get_update(stock_id, True)    #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
+        data = {}
+        with open('sample.json') as json_file:         #loads sample data
+            data = json.load(json_file)
+        if not data:                                   
             flash("Error getting update from external API", "danger")
             return redirect("/")
 
@@ -124,12 +140,16 @@ def show_stock(stock_id):
 
     return redirect('/')
 
-@app.route('/logout')
-def logout():
-    """Do Logout"""
+
+
+# *********************************** API ************************************************
+@app.route('/api/<int:stock_id>')
+def get_stock_data(stock_id):
     if g.user:
-        flash("See you later! Logout Successful.", "success")
-        do_logout()
-    
-    return redirect('/')
+        stock = Stock.query.get(stock_id)
+        return jsonify(stock.data)
+    else:
+        return "unauthorized access", 401
+
+
     
