@@ -1,0 +1,4573 @@
+{
+    "defaultKeyStatistics": {
+        "enterpriseToRevenue": {
+            "raw": 11.232,
+            "fmt": "11.23"
+        },
+        "profitMargins": {
+            "raw": 0.7875,
+            "fmt": "78.75%"
+        },
+        "enterpriseToEbitda": {
+            "raw": 67.384,
+            "fmt": "67.38"
+        },
+        "52WeekChange": {
+            "raw": 0.72818375,
+            "fmt": "72.82%"
+        },
+        "forwardEps": {
+            "raw": 6.87,
+            "fmt": "6.87"
+        },
+        "sharesOutstanding": {
+            "raw": 78786704,
+            "fmt": "78.79M",
+            "longFmt": "78,786,704"
+        },
+        "bookValue": {
+            "raw": 36.113,
+            "fmt": "36.11"
+        },
+        "sharesShort": {
+            "raw": 3253421,
+            "fmt": "3.25M",
+            "longFmt": "3,253,421"
+        },
+        "sharesPercentSharesOut": {
+            "raw": 0.041300002,
+            "fmt": "4.13%"
+        },
+        "lastFiscalYearEnd": {
+            "raw": 1577750400,
+            "fmt": "2019-12-31"
+        },
+        "heldPercentInstitutions": {
+            "raw": 0.87224996,
+            "fmt": "87.22%"
+        },
+        "netIncomeToCommon": {
+            "raw": 1701314944,
+            "fmt": "1.7B",
+            "longFmt": "1,701,314,944"
+        },
+        "trailingEps": {
+            "raw": 21.469,
+            "fmt": "21.47"
+        },
+        "SandP52WeekChange": {
+            "raw": 0.15364361,
+            "fmt": "15.36%"
+        },
+        "priceToBook": {
+            "raw": 8.499986,
+            "fmt": "8.50"
+        },
+        "heldPercentInsiders": {
+            "raw": 0.0832,
+            "fmt": "8.32%"
+        },
+        "nextFiscalYearEnd": {
+            "raw": 1640908800,
+            "fmt": "2021-12-31"
+        },
+        "mostRecentQuarter": {
+            "raw": 1593475200,
+            "fmt": "2020-06-30"
+        },
+        "shortRatio": {
+            "raw": 3.73,
+            "fmt": "3.73"
+        },
+        "sharesShortPreviousMonthDate": {
+            "raw": 1593475200,
+            "fmt": "2020-06-30"
+        },
+        "floatShares": {
+            "raw": 71361826,
+            "fmt": "71.36M",
+            "longFmt": "71,361,826"
+        },
+        "beta": {
+            "raw": 1.984065,
+            "fmt": "1.98"
+        },
+        "enterpriseValue": {
+            "raw": 24265897984,
+            "fmt": "24.27B",
+            "longFmt": "24,265,897,984"
+        },
+        "priceHint": {
+            "raw": 2,
+            "fmt": "2",
+            "longFmt": "2"
+        },
+        "dateShortInterest": {
+            "raw": 1596153600,
+            "fmt": "2020-07-31"
+        },
+        "pegRatio": {
+            "raw": 10.29,
+            "fmt": "10.29"
+        },
+        "forwardPE": {
+            "raw": 44.68122,
+            "fmt": "44.68"
+        },
+        "maxAge": 1,
+        "shortPercentOfFloat": {
+            "raw": 0.0466,
+            "fmt": "4.66%"
+        },
+        "sharesShortPriorMonth": {
+            "raw": 3671764,
+            "fmt": "3.67M",
+            "longFmt": "3,671,764"
+        }
+    },
+    "summaryProfile": {
+        "zip": "95134",
+        "sector": "Healthcare",
+        "fullTimeEmployees": 14530,
+        "longBusinessSummary": "Align Technology, Inc., a medical device company, designs, manufactures, and markets Invisalign clear aligners and iTero intraoral scanners and services for orthodontists and general practitioner dentists, and restorative and aesthetic dentistry. It operates in two segments, Clear Aligner; and Scanners and Services. The Clear Aligner segment consists of comprehensive products, including Invisalign Comprehensive treatment that addresses the orthodontic needs of teenage patients, such as mandibular advancement, compliance indicators, and compensation for tooth eruption; and Invisalign First Phase I and Invisalign First Comprehensive Phase 2 package for younger patients generally between the ages of seven and ten years, which is a mixture of primary/baby and permanent teeth. This segment's non-comprehensive products comprise Invisalign Moderate, Lite and Express packages, and Invisalign Go; and non-case products include retention products, Invisalign training fees, and sales of ancillary products, such as cleaning material, and adjusting tools used by dental professionals during the course of treatment. The Scanners and Services segment offers iTero Scanner, a single hardware platform with software options for restorative or orthodontic procedures; restorative software for general practitioner dentists, prosthodontists, periodontists, and oral surgeons; software for orthodontists for digital records storage, orthodontic diagnosis, and for the fabrication of printed models and retainers; computer-aided design/computer-aided manufacturing services and ancillary products, such as disposable sleeves for the wand; and iTero applications and tools. The company sells its products in the United States, the Netherlands, China, and internationally. Align Technology, Inc. was founded in 1997 and is headquartered in San Jose, California.",
+        "city": "San Jose",
+        "phone": "408 470 1000",
+        "country": "United States",
+        "website": "http://www.aligntech.com",
+        "maxAge": 86400,
+        "address1": "2820 Orchard Parkway",
+        "fax": "408 470 1010",
+        "industry": "Medical Devices"
+    },
+    "recommendationTrend": {
+        "trend": [
+            {
+                "period": "0m",
+                "strongBuy": 7,
+                "buy": 4
+            },
+            {
+                "period": "-1m",
+                "strongBuy": 6,
+                "buy": 5,
+                "hold": 5
+            },
+            {
+                "period": "-2m",
+                "strongBuy": 6,
+                "buy": 5,
+                "hold": 5
+            },
+            {
+                "period": "-3m",
+                "strongBuy": 8,
+                "buy": 5
+            }
+        ],
+        "maxAge": 86400
+    },
+    "financialsTemplate": {
+        "code": "N",
+        "maxAge": 1
+    },
+    "majorDirectHolders": {
+        "maxAge": 1
+    },
+    "earnings": {
+        "maxAge": 86400,
+        "earningsChart": {
+            "quarterly": [
+                {
+                    "date": "3Q2019",
+                    "actual": {
+                        "raw": 1.28,
+                        "fmt": "1.28"
+                    },
+                    "estimate": {
+                        "raw": 1.14,
+                        "fmt": "1.14"
+                    }
+                },
+                {
+                    "date": "4Q2019",
+                    "actual": {
+                        "raw": 1.53,
+                        "fmt": "1.53"
+                    },
+                    "estimate": {
+                        "raw": 1.4,
+                        "fmt": "1.40"
+                    }
+                },
+                {
+                    "date": "1Q2020",
+                    "actual": {
+                        "raw": 0.73,
+                        "fmt": "0.73"
+                    },
+                    "estimate": {
+                        "raw": 1,
+                        "fmt": "1.00"
+                    }
+                },
+                {
+                    "date": "2Q2020",
+                    "actual": {
+                        "raw": -0.35,
+                        "fmt": "-0.35"
+                    },
+                    "estimate": {
+                        "raw": -0.05,
+                        "fmt": "-0.05"
+                    }
+                }
+            ],
+            "currentQuarterEstimate": {
+                "raw": 0.53,
+                "fmt": "0.53"
+            },
+            "currentQuarterEstimateDate": "3Q",
+            "currentQuarterEstimateYear": 2020,
+            "earningsDate": [
+                {
+                    "raw": 1603238400,
+                    "fmt": "2020-10-21"
+                }
+            ]
+        },
+        "financialsChart": {
+            "yearly": [
+                {
+                    "date": 2016,
+                    "revenue": {
+                        "raw": 1079874000,
+                        "fmt": "1.08B",
+                        "longFmt": "1,079,874,000"
+                    },
+                    "earnings": {
+                        "raw": 189682000,
+                        "fmt": "189.68M",
+                        "longFmt": "189,682,000"
+                    }
+                },
+                {
+                    "date": 2017,
+                    "revenue": {
+                        "raw": 1473413000,
+                        "fmt": "1.47B",
+                        "longFmt": "1,473,413,000"
+                    },
+                    "earnings": {
+                        "raw": 231418000,
+                        "fmt": "231.42M",
+                        "longFmt": "231,418,000"
+                    }
+                },
+                {
+                    "date": 2018,
+                    "revenue": {
+                        "raw": 1966492000,
+                        "fmt": "1.97B",
+                        "longFmt": "1,966,492,000"
+                    },
+                    "earnings": {
+                        "raw": 400235000,
+                        "fmt": "400.24M",
+                        "longFmt": "400,235,000"
+                    }
+                },
+                {
+                    "date": 2019,
+                    "revenue": {
+                        "raw": 2406796000,
+                        "fmt": "2.41B",
+                        "longFmt": "2,406,796,000"
+                    },
+                    "earnings": {
+                        "raw": 442776000,
+                        "fmt": "442.78M",
+                        "longFmt": "442,776,000"
+                    }
+                }
+            ],
+            "quarterly": [
+                {
+                    "date": "3Q2019",
+                    "revenue": {
+                        "raw": 607341000,
+                        "fmt": "607.34M",
+                        "longFmt": "607,341,000"
+                    },
+                    "earnings": {
+                        "raw": 102524000,
+                        "fmt": "102.52M",
+                        "longFmt": "102,524,000"
+                    }
+                },
+                {
+                    "date": "4Q2019",
+                    "revenue": {
+                        "raw": 649787000,
+                        "fmt": "649.79M",
+                        "longFmt": "649,787,000"
+                    },
+                    "earnings": {
+                        "raw": 121262000,
+                        "fmt": "121.26M",
+                        "longFmt": "121,262,000"
+                    }
+                },
+                {
+                    "date": "1Q2020",
+                    "revenue": {
+                        "raw": 550963000,
+                        "fmt": "550.96M",
+                        "longFmt": "550,963,000"
+                    },
+                    "earnings": {
+                        "raw": 1518131000,
+                        "fmt": "1.52B",
+                        "longFmt": "1,518,131,000"
+                    }
+                },
+                {
+                    "date": "2Q2020",
+                    "revenue": {
+                        "raw": 352314000,
+                        "fmt": "352.31M",
+                        "longFmt": "352,314,000"
+                    },
+                    "earnings": {
+                        "raw": -40602000,
+                        "fmt": "-40.6M",
+                        "longFmt": "-40,602,000"
+                    }
+                }
+            ]
+        },
+        "financialCurrency": "USD"
+    },
+    "price": {
+        "quoteSourceName": "Delayed Quote",
+        "regularMarketOpen": {
+            "raw": 311.01,
+            "fmt": "311.01"
+        },
+        "averageDailyVolume3Month": {
+            "raw": 926270,
+            "fmt": "926.27k",
+            "longFmt": "926,270"
+        },
+        "exchange": "NMS",
+        "regularMarketTime": 1597435201,
+        "regularMarketDayHigh": {
+            "raw": 312.89,
+            "fmt": "312.89"
+        },
+        "shortName": "Align Technology, Inc.",
+        "averageDailyVolume10Day": {
+            "raw": 570200,
+            "fmt": "570.2k",
+            "longFmt": "570,200"
+        },
+        "longName": "Align Technology, Inc.",
+        "regularMarketChange": {
+            "raw": -5.26001,
+            "fmt": "-5.26"
+        },
+        "currencySymbol": "$",
+        "regularMarketPreviousClose": {
+            "raw": 312.22,
+            "fmt": "312.22"
+        },
+        "postMarketTime": 1597447107,
+        "postMarketChange": {
+            "raw": -0.23999023,
+            "fmt": "-0.24"
+        },
+        "postMarketPrice": {
+            "raw": 306.72,
+            "fmt": "306.72"
+        },
+        "exchangeName": "NasdaqGS",
+        "regularMarketDayLow": {
+            "raw": 305.715,
+            "fmt": "305.71"
+        },
+        "priceHint": {
+            "raw": 2,
+            "fmt": "2",
+            "longFmt": "2"
+        },
+        "currency": "USD",
+        "regularMarketPrice": {
+            "raw": 306.96,
+            "fmt": "306.96"
+        },
+        "regularMarketVolume": {
+            "raw": 334245,
+            "fmt": "334.25k",
+            "longFmt": "334,245.00"
+        },
+        "regularMarketSource": "FREE_REALTIME",
+        "marketState": "CLOSED",
+        "marketCap": {
+            "raw": 24184365056,
+            "fmt": "24.18B",
+            "longFmt": "24,184,365,056.00"
+        },
+        "quoteType": "EQUITY",
+        "postMarketSource": "DELAYED",
+        "symbol": "ALGN",
+        "postMarketChangePercent": {
+            "raw": -0.00078182906,
+            "fmt": "-0.08%"
+        },
+        "preMarketSource": "DELAYED",
+        "maxAge": 1,
+        "regularMarketChangePercent": {
+            "raw": -0.016847126,
+            "fmt": "-1.68%"
+        }
+    },
+    "fundOwnership": {
+        "maxAge": 1
+    },
+    "insiderTransactions": {
+        "transactions": [
+            {
+                "filerName": "THALER WARREN S",
+                "transactionText": "Sale at price 295.59 - 298.45 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1596585600,
+                    "fmt": "2020-08-05"
+                },
+                "value": {
+                    "raw": 2072562,
+                    "fmt": "2.07M",
+                    "longFmt": "2,072,562"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 7000,
+                    "fmt": "7k",
+                    "longFmt": "7,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PRESCOTT THOMAS M",
+                "transactionText": "Sale at price 301.23 - 305.98 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1595980800,
+                    "fmt": "2020-07-29"
+                },
+                "value": {
+                    "raw": 10564086,
+                    "fmt": "10.56M",
+                    "longFmt": "10,564,086"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 35000,
+                    "fmt": "35k",
+                    "longFmt": "35,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SHAKED YUVAL",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1595203200,
+                    "fmt": "2020-07-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 2216,
+                    "fmt": "2.22k",
+                    "longFmt": "2,216"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "COLETTI JULIE ANN",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1595203200,
+                    "fmt": "2020-07-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 707,
+                    "fmt": "707",
+                    "longFmt": "707"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1592524800,
+                    "fmt": "2020-06-19"
+                },
+                "value": {
+                    "raw": 1,
+                    "fmt": "1",
+                    "longFmt": "1"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 5388,
+                    "fmt": "5.39k",
+                    "longFmt": "5,388"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORICI JOHN F.",
+                "transactionText": "Sale at price 251.55 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1590710400,
+                    "fmt": "2020-05-29"
+                },
+                "value": {
+                    "raw": 1044944,
+                    "fmt": "1.04M",
+                    "longFmt": "1,044,944"
+                },
+                "filerRelation": "Chief Financial Officer",
+                "shares": {
+                    "raw": 4154,
+                    "fmt": "4.15k",
+                    "longFmt": "4,154"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 251.15 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1590624000,
+                    "fmt": "2020-05-28"
+                },
+                "value": {
+                    "raw": 2511534,
+                    "fmt": "2.51M",
+                    "longFmt": "2,511,534"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 10000,
+                    "fmt": "10k",
+                    "longFmt": "10,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "WRIGHT EMORY M",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1590537600,
+                    "fmt": "2020-05-27"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 32031,
+                    "fmt": "32.03k",
+                    "longFmt": "32,031"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "TAY JULIE",
+                "transactionText": "Sale at price 241.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1590105600,
+                    "fmt": "2020-05-22"
+                },
+                "value": {
+                    "raw": 812170,
+                    "fmt": "812.17k",
+                    "longFmt": "812,170"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 3370,
+                    "fmt": "3.37k",
+                    "longFmt": "3,370"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "OLSON JENNIFER",
+                "transactionText": "Sale at price 243.58 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1590105600,
+                    "fmt": "2020-05-22"
+                },
+                "value": {
+                    "raw": 477904,
+                    "fmt": "477.9k",
+                    "longFmt": "477,904"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 1962,
+                    "fmt": "1.96k",
+                    "longFmt": "1,962"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MYONG ANNE",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589932800,
+                    "fmt": "2020-05-20"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 935,
+                    "fmt": "935",
+                    "longFmt": "935"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORICI JOHN F.",
+                "transactionText": "Sale at price 227.95 - 227.96 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589846400,
+                    "fmt": "2020-05-19"
+                },
+                "value": {
+                    "raw": 1332653,
+                    "fmt": "1.33M",
+                    "longFmt": "1,332,653"
+                },
+                "filerRelation": "Chief Financial Officer",
+                "shares": {
+                    "raw": 5846,
+                    "fmt": "5.85k",
+                    "longFmt": "5,846"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PUDIPEDDI VAMSI MOHAN RAJ",
+                "transactionText": "Sale at price 229.72 - 230.50 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589760000,
+                    "fmt": "2020-05-18"
+                },
+                "value": {
+                    "raw": 539793,
+                    "fmt": "539.79k",
+                    "longFmt": "539,793"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 2346,
+                    "fmt": "2.35k",
+                    "longFmt": "2,346"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORROW GEORGE J",
+                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORROW GEORGE J",
+                "transactionText": "Conversion of Exercise of derivative security at price 203.67 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "raw": 187580,
+                    "fmt": "187.58k",
+                    "longFmt": "187,580"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1228,
+                    "fmt": "1.23k",
+                    "longFmt": "1,228"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Conversion of Exercise of derivative security at price 203.67 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "raw": 187580,
+                    "fmt": "187.58k",
+                    "longFmt": "187,580"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SANTORA GREG J",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SIEGEL SUSAN E",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PRESCOTT THOMAS M",
+                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PRESCOTT THOMAS M",
+                "transactionText": "Conversion of Exercise of derivative security at price 203.67 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "raw": 187580,
+                    "fmt": "187.58k",
+                    "longFmt": "187,580"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "THALER WARREN S",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SAIA ANDREA LYNN",
+                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SAIA ANDREA LYNN",
+                "transactionText": "Conversion of Exercise of derivative security at price 203.67 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "raw": 187580,
+                    "fmt": "187.58k",
+                    "longFmt": "187,580"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "DALLAS KEVIN J.",
+                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "DALLAS KEVIN J.",
+                "transactionText": "Conversion of Exercise of derivative security at price 203.67 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1589500800,
+                    "fmt": "2020-05-15"
+                },
+                "value": {
+                    "raw": 187580,
+                    "fmt": "187.58k",
+                    "longFmt": "187,580"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 921,
+                    "fmt": "921",
+                    "longFmt": "921"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PUDIPEDDI VAMSI MOHAN RAJ",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1584662400,
+                    "fmt": "2020-03-20"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 2233,
+                    "fmt": "2.23k",
+                    "longFmt": "2,233"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1583452800,
+                    "fmt": "2020-03-06"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 135,
+                    "fmt": "135",
+                    "longFmt": "135"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOGAN JOSEPH M",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Chief Executive Officer",
+                "shares": {
+                    "raw": 95499,
+                    "fmt": "95.5k",
+                    "longFmt": "95,499"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "WRIGHT EMORY M",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 19371,
+                    "fmt": "19.37k",
+                    "longFmt": "19,371"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "RELIC ZELKO",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Chief Technology Officer",
+                "shares": {
+                    "raw": 19371,
+                    "fmt": "19.37k",
+                    "longFmt": "19,371"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "TAY JULIE",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 17246,
+                    "fmt": "17.25k",
+                    "longFmt": "17,246"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "BEARD SIMON",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 16633,
+                    "fmt": "16.63k",
+                    "longFmt": "16,633"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 14471,
+                    "fmt": "14.47k",
+                    "longFmt": "14,471"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "OLSON JENNIFER",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 10625,
+                    "fmt": "10.62k",
+                    "longFmt": "10,625"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORICI JOHN F.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Chief Financial Officer",
+                "shares": {
+                    "raw": 16995,
+                    "fmt": "17k",
+                    "longFmt": "16,995"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "KOLLI SREELAKSHMI",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 14036,
+                    "fmt": "14.04k",
+                    "longFmt": "14,036"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SHAKED YUVAL",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 834,
+                    "fmt": "834",
+                    "longFmt": "834"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "COLETTI JULIE ANN",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 252,
+                    "fmt": "252",
+                    "longFmt": "252"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SEBASTIAN MARKUS CHRISTOF",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1582156800,
+                    "fmt": "2020-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 67,
+                    "fmt": "67",
+                    "longFmt": "67"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SIEGEL SUSAN E",
+                "transactionText": "Sale at price 270.00 - 275.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1581465600,
+                    "fmt": "2020-02-12"
+                },
+                "value": {
+                    "raw": 383500,
+                    "fmt": "383.5k",
+                    "longFmt": "383,500"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1400,
+                    "fmt": "1.4k",
+                    "longFmt": "1,400"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SIEGEL SUSAN E",
+                "transactionText": "Sale at price 257.50 - 260.05 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1580860800,
+                    "fmt": "2020-02-05"
+                },
+                "value": {
+                    "raw": 155265,
+                    "fmt": "155.26k",
+                    "longFmt": "155,265"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 600,
+                    "fmt": "600",
+                    "longFmt": "600"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOGAN JOSEPH M",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1580774400,
+                    "fmt": "2020-02-04"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Chief Executive Officer",
+                "shares": {
+                    "raw": 12000,
+                    "fmt": "12k",
+                    "longFmt": "12,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "transactionText": "Sale at price 253.58 - 253.84 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1580688000,
+                    "fmt": "2020-02-03"
+                },
+                "value": {
+                    "raw": 203433,
+                    "fmt": "203.43k",
+                    "longFmt": "203,433"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 802,
+                    "fmt": "802",
+                    "longFmt": "802"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1577404800,
+                    "fmt": "2019-12-27"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 1200,
+                    "fmt": "1.2k",
+                    "longFmt": "1,200"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1576454400,
+                    "fmt": "2019-12-16"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 357,
+                    "fmt": "357",
+                    "longFmt": "357"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "TAY JULIE",
+                "transactionText": "Sale at price 280.01 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1574726400,
+                    "fmt": "2019-11-26"
+                },
+                "value": {
+                    "raw": 766947,
+                    "fmt": "766.95k",
+                    "longFmt": "766,947"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 2739,
+                    "fmt": "2.74k",
+                    "longFmt": "2,739"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "OLSON JENNIFER",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1574208000,
+                    "fmt": "2019-11-20"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 117,
+                    "fmt": "117",
+                    "longFmt": "117"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORICI JOHN F.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1574208000,
+                    "fmt": "2019-11-20"
+                },
+                "filerRelation": "Chief Financial Officer",
+                "shares": {
+                    "raw": 4709,
+                    "fmt": "4.71k",
+                    "longFmt": "4,709"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SHAKED YUVAL",
+                "transactionText": "Sale at price 268.61 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1574035200,
+                    "fmt": "2019-11-18"
+                },
+                "value": {
+                    "raw": 214888,
+                    "fmt": "214.89k",
+                    "longFmt": "214,888"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 800,
+                    "fmt": "800",
+                    "longFmt": "800"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 260.00 - 260.40 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1573516800,
+                    "fmt": "2019-11-12"
+                },
+                "value": {
+                    "raw": 5204898,
+                    "fmt": "5.2M",
+                    "longFmt": "5,204,898"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 20000,
+                    "fmt": "20k",
+                    "longFmt": "20,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "OLSON JENNIFER",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1573430400,
+                    "fmt": "2019-11-11"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 429,
+                    "fmt": "429",
+                    "longFmt": "429"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SHAKED YUVAL",
+                "transactionText": "Sale at price 260.25 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1573171200,
+                    "fmt": "2019-11-08"
+                },
+                "value": {
+                    "raw": 130125,
+                    "fmt": "130.12k",
+                    "longFmt": "130,125"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 500,
+                    "fmt": "500",
+                    "longFmt": "500"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PRESCOTT THOMAS M",
+                "transactionText": "Sale at price 257.61 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1572825600,
+                    "fmt": "2019-11-04"
+                },
+                "value": {
+                    "raw": 1932075,
+                    "fmt": "1.93M",
+                    "longFmt": "1,932,075"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 7500,
+                    "fmt": "7.5k",
+                    "longFmt": "7,500"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "transactionText": "Sale at price 250.08 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1572480000,
+                    "fmt": "2019-10-31"
+                },
+                "value": {
+                    "raw": 1262655,
+                    "fmt": "1.26M",
+                    "longFmt": "1,262,655"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 5049,
+                    "fmt": "5.05k",
+                    "longFmt": "5,049"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "THALER WARREN S",
+                "transactionText": "Sale at price 249.90 - 250.84 per share.",
+                "ownership": "D/I",
+                "startDate": {
+                    "raw": 1572220800,
+                    "fmt": "2019-10-28"
+                },
+                "value": {
+                    "raw": 1611953,
+                    "fmt": "1.61M",
+                    "longFmt": "1,611,953"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 6442,
+                    "fmt": "6.44k",
+                    "longFmt": "6,442"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SEBASTIAN MARKUS CHRISTOF",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1571616000,
+                    "fmt": "2019-10-21"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 300,
+                    "fmt": "300",
+                    "longFmt": "300"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PASCAUD RAPHAEL S",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1569888000,
+                    "fmt": "2019-10-01"
+                },
+                "value": {
+                    "raw": 1,
+                    "fmt": "1",
+                    "longFmt": "1"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 5783,
+                    "fmt": "5.78k",
+                    "longFmt": "5,783"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORICI JOHN F.",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1568937600,
+                    "fmt": "2019-09-20"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Chief Financial Officer",
+                "shares": {
+                    "raw": 1573,
+                    "fmt": "1.57k",
+                    "longFmt": "1,573"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SHAKED YUVAL",
+                "transactionText": "Sale at price 183.60 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1567123200,
+                    "fmt": "2019-08-30"
+                },
+                "value": {
+                    "raw": 165240,
+                    "fmt": "165.24k",
+                    "longFmt": "165,240"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 900,
+                    "fmt": "900",
+                    "longFmt": "900"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 177.64 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1566950400,
+                    "fmt": "2019-08-28"
+                },
+                "value": {
+                    "raw": 1776419,
+                    "fmt": "1.78M",
+                    "longFmt": "1,776,419"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 10000,
+                    "fmt": "10k",
+                    "longFmt": "10,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SAIA ANDREA LYNN",
+                "transactionText": "Sale at price 179.54 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1566432000,
+                    "fmt": "2019-08-22"
+                },
+                "value": {
+                    "raw": 746356,
+                    "fmt": "746.36k",
+                    "longFmt": "746,356"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 4157,
+                    "fmt": "4.16k",
+                    "longFmt": "4,157"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 180.08 - 183.50 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1565654400,
+                    "fmt": "2019-08-13"
+                },
+                "value": {
+                    "raw": 5453787,
+                    "fmt": "5.45M",
+                    "longFmt": "5,453,787"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 30000,
+                    "fmt": "30k",
+                    "longFmt": "30,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SHAKED YUVAL",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1563753600,
+                    "fmt": "2019-07-22"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 2217,
+                    "fmt": "2.22k",
+                    "longFmt": "2,217"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "COLETTI JULIE ANN",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1563753600,
+                    "fmt": "2019-07-22"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 386,
+                    "fmt": "386",
+                    "longFmt": "386"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1560988800,
+                    "fmt": "2019-06-20"
+                },
+                "value": {
+                    "raw": 1,
+                    "fmt": "1",
+                    "longFmt": "1"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 5389,
+                    "fmt": "5.39k",
+                    "longFmt": "5,389"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORICI JOHN F.",
+                "transactionText": "Sale at price 286.91 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1559260800,
+                    "fmt": "2019-05-31"
+                },
+                "value": {
+                    "raw": 681129,
+                    "fmt": "681.13k",
+                    "longFmt": "681,129"
+                },
+                "filerRelation": "Chief Financial Officer",
+                "shares": {
+                    "raw": 2374,
+                    "fmt": "2.37k",
+                    "longFmt": "2,374"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "transactionText": "Sale at price 296.65 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1559174400,
+                    "fmt": "2019-05-30"
+                },
+                "value": {
+                    "raw": 2887555,
+                    "fmt": "2.89M",
+                    "longFmt": "2,887,555"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 9734,
+                    "fmt": "9.73k",
+                    "longFmt": "9,734"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "transactionText": "Sale at price 296.68 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1559174400,
+                    "fmt": "2019-05-30"
+                },
+                "value": {
+                    "raw": 5547914,
+                    "fmt": "5.55M",
+                    "longFmt": "5,547,914"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 18700,
+                    "fmt": "18.7k",
+                    "longFmt": "18,700"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "transactionText": "Sale at price 295.67 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1559174400,
+                    "fmt": "2019-05-30"
+                },
+                "value": {
+                    "raw": 5529029,
+                    "fmt": "5.53M",
+                    "longFmt": "5,529,029"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 18700,
+                    "fmt": "18.7k",
+                    "longFmt": "18,700"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SANTORA GREG J",
+                "transactionText": "Sale at price 313.13 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1559001600,
+                    "fmt": "2019-05-28"
+                },
+                "value": {
+                    "raw": 939398,
+                    "fmt": "939.4k",
+                    "longFmt": "939,398"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3000,
+                    "fmt": "3k",
+                    "longFmt": "3,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PRESCOTT THOMAS M",
+                "transactionText": "Sale at price 306.98 - 307.76 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1558569600,
+                    "fmt": "2019-05-23"
+                },
+                "value": {
+                    "raw": 3685648,
+                    "fmt": "3.69M",
+                    "longFmt": "3,685,648"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 12000,
+                    "fmt": "12k",
+                    "longFmt": "12,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "THALER WARREN S",
+                "transactionText": "Sale at price 306.75 - 315.17 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1558569600,
+                    "fmt": "2019-05-23"
+                },
+                "value": {
+                    "raw": 973520,
+                    "fmt": "973.52k",
+                    "longFmt": "973,520"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3115,
+                    "fmt": "3.12k",
+                    "longFmt": "3,115"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "OLSON JENNIFER",
+                "transactionText": "Sale at price 331.89 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557964800,
+                    "fmt": "2019-05-16"
+                },
+                "value": {
+                    "raw": 1092236,
+                    "fmt": "1.09M",
+                    "longFmt": "1,092,236"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 3291,
+                    "fmt": "3.29k",
+                    "longFmt": "3,291"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORROW GEORGE J",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1042,
+                    "fmt": "1.04k",
+                    "longFmt": "1,042"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1390,
+                    "fmt": "1.39k",
+                    "longFmt": "1,390"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1042,
+                    "fmt": "1.04k",
+                    "longFmt": "1,042"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SANTORA GREG J",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1042,
+                    "fmt": "1.04k",
+                    "longFmt": "1,042"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SIEGEL SUSAN E",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1042,
+                    "fmt": "1.04k",
+                    "longFmt": "1,042"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PRESCOTT THOMAS M",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1042,
+                    "fmt": "1.04k",
+                    "longFmt": "1,042"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "THALER WARREN S",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1042,
+                    "fmt": "1.04k",
+                    "longFmt": "1,042"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SAIA ANDREA LYNN",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1042,
+                    "fmt": "1.04k",
+                    "longFmt": "1,042"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PASCAUD RAPHAEL S",
+                "transactionText": "Sale at price 325.27 - 328.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "value": {
+                    "raw": 4892670,
+                    "fmt": "4.89M",
+                    "longFmt": "4,892,670"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 15000,
+                    "fmt": "15k",
+                    "longFmt": "15,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "TAY JULIE",
+                "transactionText": "Sale at price 315.00 - 325.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "value": {
+                    "raw": 4352500,
+                    "fmt": "4.35M",
+                    "longFmt": "4,352,500"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 13500,
+                    "fmt": "13.5k",
+                    "longFmt": "13,500"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "KOLLI SREELAKSHMI",
+                "transactionText": "Sale at price 321.53 - 328.27 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "value": {
+                    "raw": 6321938,
+                    "fmt": "6.32M",
+                    "longFmt": "6,321,938"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 19495,
+                    "fmt": "19.5k",
+                    "longFmt": "19,495"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "DALLAS KEVIN J.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557878400,
+                    "fmt": "2019-05-15"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 1042,
+                    "fmt": "1.04k",
+                    "longFmt": "1,042"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 320.00 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1557792000,
+                    "fmt": "2019-05-14"
+                },
+                "value": {
+                    "raw": 1600000,
+                    "fmt": "1.6M",
+                    "longFmt": "1,600,000"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 5000,
+                    "fmt": "5k",
+                    "longFmt": "5,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "GEORGE ROGER E",
+                "transactionText": "Sale at price 323.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557792000,
+                    "fmt": "2019-05-14"
+                },
+                "value": {
+                    "raw": 1038122,
+                    "fmt": "1.04M",
+                    "longFmt": "1,038,122"
+                },
+                "filerRelation": "General Counsel",
+                "shares": {
+                    "raw": 3214,
+                    "fmt": "3.21k",
+                    "longFmt": "3,214"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "TAY JULIE",
+                "transactionText": "Sale at price 325.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1557273600,
+                    "fmt": "2019-05-08"
+                },
+                "value": {
+                    "raw": 1157000,
+                    "fmt": "1.16M",
+                    "longFmt": "1,157,000"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 3560,
+                    "fmt": "3.56k",
+                    "longFmt": "3,560"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1556496000,
+                    "fmt": "2019-04-29"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 146,
+                    "fmt": "146",
+                    "longFmt": "146"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "RELIC ZELKO",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1553212800,
+                    "fmt": "2019-03-22"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 205,
+                    "fmt": "205",
+                    "longFmt": "205"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 257.08 - 259.00 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1551312000,
+                    "fmt": "2019-02-28"
+                },
+                "value": {
+                    "raw": 5166214,
+                    "fmt": "5.17M",
+                    "longFmt": "5,166,214"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 20000,
+                    "fmt": "20k",
+                    "longFmt": "20,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 257.08 - 259.00 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1551312000,
+                    "fmt": "2019-02-28"
+                },
+                "value": {
+                    "raw": 5166214,
+                    "fmt": "5.17M",
+                    "longFmt": "5,166,214"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 20000,
+                    "fmt": "20k",
+                    "longFmt": "20,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SHAKED YUVAL",
+                "transactionText": "Sale at price 255.52 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1551052800,
+                    "fmt": "2019-02-25"
+                },
+                "value": {
+                    "raw": 102208,
+                    "fmt": "102.21k",
+                    "longFmt": "102,208"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 400,
+                    "fmt": "400",
+                    "longFmt": "400"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOGAN JOSEPH M",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "Chief Executive Officer",
+                "shares": {
+                    "raw": 85150,
+                    "fmt": "85.15k",
+                    "longFmt": "85,150"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PRESCOTT THOMAS M",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "value": {
+                    "raw": 1,
+                    "fmt": "1",
+                    "longFmt": "1"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 12250,
+                    "fmt": "12.25k",
+                    "longFmt": "12,250"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "WRIGHT EMORY M",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 21900,
+                    "fmt": "21.9k",
+                    "longFmt": "21,900"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "GEORGE ROGER E",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "General Counsel",
+                "shares": {
+                    "raw": 21375,
+                    "fmt": "21.38k",
+                    "longFmt": "21,375"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "GEORGE ROGER E",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "General Counsel",
+                "shares": {
+                    "raw": 21375,
+                    "fmt": "21.38k",
+                    "longFmt": "21,375"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "RELIC ZELKO",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 22775,
+                    "fmt": "22.77k",
+                    "longFmt": "22,775"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PASCAUD RAPHAEL S",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "value": {
+                    "raw": 3,
+                    "fmt": "3",
+                    "longFmt": "3"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 26425,
+                    "fmt": "26.43k",
+                    "longFmt": "26,425"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "TAY JULIE",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 19230,
+                    "fmt": "19.23k",
+                    "longFmt": "19,230"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "BEARD SIMON",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 16825,
+                    "fmt": "16.82k",
+                    "longFmt": "16,825"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 1950,
+                    "fmt": "1.95k",
+                    "longFmt": "1,950"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "OLSON JENNIFER",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 2236,
+                    "fmt": "2.24k",
+                    "longFmt": "2,236"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORICI JOHN F.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "Chief Financial Officer",
+                "shares": {
+                    "raw": 2325,
+                    "fmt": "2.33k",
+                    "longFmt": "2,325"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "KOLLI SREELAKSHMI",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 5372,
+                    "fmt": "5.37k",
+                    "longFmt": "5,372"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SHAKED YUVAL",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1550620800,
+                    "fmt": "2019-02-20"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 424,
+                    "fmt": "424",
+                    "longFmt": "424"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "TAY JULIE",
+                "transactionText": "Sale at price 254.58 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1549929600,
+                    "fmt": "2019-02-12"
+                },
+                "value": {
+                    "raw": 318228,
+                    "fmt": "318.23k",
+                    "longFmt": "318,228"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 1250,
+                    "fmt": "1.25k",
+                    "longFmt": "1,250"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOGAN JOSEPH M",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1546214400,
+                    "fmt": "2018-12-31"
+                },
+                "filerRelation": "Chief Executive Officer",
+                "shares": {
+                    "raw": 27750,
+                    "fmt": "27.75k",
+                    "longFmt": "27,750"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1545868800,
+                    "fmt": "2018-12-27"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 1200,
+                    "fmt": "1.2k",
+                    "longFmt": "1,200"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "BEARD SIMON",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1545264000,
+                    "fmt": "2018-12-20"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 2000,
+                    "fmt": "2k",
+                    "longFmt": "2,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 231.82 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1543536000,
+                    "fmt": "2018-11-30"
+                },
+                "value": {
+                    "raw": 2318151,
+                    "fmt": "2.32M",
+                    "longFmt": "2,318,151"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 10000,
+                    "fmt": "10k",
+                    "longFmt": "10,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PUCO CHRISTOPHER C",
+                "transactionText": "Sale at price 227.39 - 228.05 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1543536000,
+                    "fmt": "2018-11-30"
+                },
+                "value": {
+                    "raw": 1993075,
+                    "fmt": "1.99M",
+                    "longFmt": "1,993,075"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 8764,
+                    "fmt": "8.76k",
+                    "longFmt": "8,764"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "KOLLI SREELAKSHMI",
+                "transactionText": "Sale at price 222.96 - 223.91 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1543276800,
+                    "fmt": "2018-11-27"
+                },
+                "value": {
+                    "raw": 1115773,
+                    "fmt": "1.12M",
+                    "longFmt": "1,115,773"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 5000,
+                    "fmt": "5k",
+                    "longFmt": "5,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORICI JOHN F.",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1542672000,
+                    "fmt": "2018-11-20"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Chief Financial Officer",
+                "shares": {
+                    "raw": 4709,
+                    "fmt": "4.71k",
+                    "longFmt": "4,709"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1537833600,
+                    "fmt": "2018-09-25"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 27439,
+                    "fmt": "27.44k",
+                    "longFmt": "27,439"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1537833600,
+                    "fmt": "2018-09-25"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 28519,
+                    "fmt": "28.52k",
+                    "longFmt": "28,519"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORICI JOHN F.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1537401600,
+                    "fmt": "2018-09-20"
+                },
+                "filerRelation": "Chief Financial Officer",
+                "shares": {
+                    "raw": 1573,
+                    "fmt": "1.57k",
+                    "longFmt": "1,573"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "BEARD SIMON",
+                "transactionText": "Sale at price 384.48 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1535500800,
+                    "fmt": "2018-08-29"
+                },
+                "value": {
+                    "raw": 1497534,
+                    "fmt": "1.5M",
+                    "longFmt": "1,497,534"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 3895,
+                    "fmt": "3.9k",
+                    "longFmt": "3,895"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 382.00 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1535328000,
+                    "fmt": "2018-08-27"
+                },
+                "value": {
+                    "raw": 3820013,
+                    "fmt": "3.82M",
+                    "longFmt": "3,820,013"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 10000,
+                    "fmt": "10k",
+                    "longFmt": "10,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "RELIC ZELKO",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1535328000,
+                    "fmt": "2018-08-27"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 621,
+                    "fmt": "621",
+                    "longFmt": "621"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "THALER WARREN S",
+                "transactionText": "Sale at price 363.62 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1534982400,
+                    "fmt": "2018-08-23"
+                },
+                "value": {
+                    "raw": 1272669,
+                    "fmt": "1.27M",
+                    "longFmt": "1,272,669"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3500,
+                    "fmt": "3.5k",
+                    "longFmt": "3,500"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PASCAUD RAPHAEL S",
+                "transactionText": "Sale at price 361.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1534982400,
+                    "fmt": "2018-08-23"
+                },
+                "value": {
+                    "raw": 3790500,
+                    "fmt": "3.79M",
+                    "longFmt": "3,790,500"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 10500,
+                    "fmt": "10.5k",
+                    "longFmt": "10,500"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "GEORGE ROGER E",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1534377600,
+                    "fmt": "2018-08-16"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "General Counsel",
+                "shares": {
+                    "raw": 738,
+                    "fmt": "738",
+                    "longFmt": "738"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "transactionText": "Sale at price 366.73 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1534291200,
+                    "fmt": "2018-08-15"
+                },
+                "value": {
+                    "raw": 1009608,
+                    "fmt": "1.01M",
+                    "longFmt": "1,009,608"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 2753,
+                    "fmt": "2.75k",
+                    "longFmt": "2,753"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOGAN JOSEPH M",
+                "transactionText": "Sale at price 367.48 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1534204800,
+                    "fmt": "2018-08-14"
+                },
+                "value": {
+                    "raw": 9186990,
+                    "fmt": "9.19M",
+                    "longFmt": "9,186,990"
+                },
+                "filerRelation": "Chief Executive Officer",
+                "shares": {
+                    "raw": 25000,
+                    "fmt": "25k",
+                    "longFmt": "25,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "RELIC ZELKO",
+                "transactionText": "Sale at price 366.83 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1534204800,
+                    "fmt": "2018-08-14"
+                },
+                "value": {
+                    "raw": 2353960,
+                    "fmt": "2.35M",
+                    "longFmt": "2,353,960"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 6417,
+                    "fmt": "6.42k",
+                    "longFmt": "6,417"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1529452800,
+                    "fmt": "2018-06-20"
+                },
+                "value": {
+                    "raw": 1,
+                    "fmt": "1",
+                    "longFmt": "1"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 5389,
+                    "fmt": "5.39k",
+                    "longFmt": "5,389"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOGAN JOSEPH M",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1527811200,
+                    "fmt": "2018-06-01"
+                },
+                "value": {
+                    "raw": 17,
+                    "fmt": "17",
+                    "longFmt": "17"
+                },
+                "filerRelation": "Chief Executive Officer",
+                "shares": {
+                    "raw": 166500,
+                    "fmt": "166.5k",
+                    "longFmt": "166,500"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 332.38 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1527724800,
+                    "fmt": "2018-05-31"
+                },
+                "value": {
+                    "raw": 3323750,
+                    "fmt": "3.32M",
+                    "longFmt": "3,323,750"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 10000,
+                    "fmt": "10k",
+                    "longFmt": "10,000"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "OLSON JENNIFER",
+                "transactionText": "Sale at price 334.05 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1527724800,
+                    "fmt": "2018-05-31"
+                },
+                "value": {
+                    "raw": 502747,
+                    "fmt": "502.75k",
+                    "longFmt": "502,747"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 1505,
+                    "fmt": "1.5k",
+                    "longFmt": "1,505"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORICI JOHN F.",
+                "transactionText": "Sale at price 331.35 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1527638400,
+                    "fmt": "2018-05-30"
+                },
+                "value": {
+                    "raw": 796908,
+                    "fmt": "796.91k",
+                    "longFmt": "796,908"
+                },
+                "filerRelation": "Chief Financial Officer",
+                "shares": {
+                    "raw": 2405,
+                    "fmt": "2.4k",
+                    "longFmt": "2,405"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SANTORA GREG J",
+                "transactionText": "Sale at price 324.07 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1527552000,
+                    "fmt": "2018-05-29"
+                },
+                "value": {
+                    "raw": 1782385,
+                    "fmt": "1.78M",
+                    "longFmt": "1,782,385"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 5500,
+                    "fmt": "5.5k",
+                    "longFmt": "5,500"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "THALER WARREN S",
+                "transactionText": "Sale at price 315.10 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1527120000,
+                    "fmt": "2018-05-24"
+                },
+                "value": {
+                    "raw": 1102846,
+                    "fmt": "1.1M",
+                    "longFmt": "1,102,846"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3500,
+                    "fmt": "3.5k",
+                    "longFmt": "3,500"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SAIA ANDREA LYNN",
+                "transactionText": "Sale at price 311.88 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1527120000,
+                    "fmt": "2018-05-24"
+                },
+                "value": {
+                    "raw": 1268436,
+                    "fmt": "1.27M",
+                    "longFmt": "1,268,436"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 4067,
+                    "fmt": "4.07k",
+                    "longFmt": "4,067"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "HOCKRIDGE STUART A",
+                "transactionText": "Sale at price 315.12 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1527120000,
+                    "fmt": "2018-05-24"
+                },
+                "value": {
+                    "raw": 1368248,
+                    "fmt": "1.37M",
+                    "longFmt": "1,368,248"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 4342,
+                    "fmt": "4.34k",
+                    "longFmt": "4,342"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "WRIGHT EMORY M",
+                "transactionText": "Stock Gift at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1526860800,
+                    "fmt": "2018-05-21"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 409,
+                    "fmt": "409",
+                    "longFmt": "409"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "TAY JULIE",
+                "transactionText": "Sale at price 300.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1526860800,
+                    "fmt": "2018-05-21"
+                },
+                "value": {
+                    "raw": 1332000,
+                    "fmt": "1.33M",
+                    "longFmt": "1,332,000"
+                },
+                "filerRelation": "Officer",
+                "shares": {
+                    "raw": 4440,
+                    "fmt": "4.44k",
+                    "longFmt": "4,440"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "MORROW GEORGE J",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1526428800,
+                    "fmt": "2018-05-16"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3115,
+                    "fmt": "3.12k",
+                    "longFmt": "3,115"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LARKIN CHARLES RAYMOND JR",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1526428800,
+                    "fmt": "2018-05-16"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 4344,
+                    "fmt": "4.34k",
+                    "longFmt": "4,344"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1526428800,
+                    "fmt": "2018-05-16"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3115,
+                    "fmt": "3.12k",
+                    "longFmt": "3,115"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SANTORA GREG J",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1526428800,
+                    "fmt": "2018-05-16"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3115,
+                    "fmt": "3.12k",
+                    "longFmt": "3,115"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SIEGEL SUSAN E",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1526428800,
+                    "fmt": "2018-05-16"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3115,
+                    "fmt": "3.12k",
+                    "longFmt": "3,115"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "PRESCOTT THOMAS M",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1526428800,
+                    "fmt": "2018-05-16"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3115,
+                    "fmt": "3.12k",
+                    "longFmt": "3,115"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "THALER WARREN S",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1526428800,
+                    "fmt": "2018-05-16"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3115,
+                    "fmt": "3.12k",
+                    "longFmt": "3,115"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "SAIA ANDREA LYNN",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1526428800,
+                    "fmt": "2018-05-16"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 3115,
+                    "fmt": "3.12k",
+                    "longFmt": "3,115"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "DALLAS KEVIN J.",
+                "transactionText": "Conversion of Exercise of derivative security at price 0.00 per share.",
+                "ownership": "D",
+                "startDate": {
+                    "raw": 1526428800,
+                    "fmt": "2018-05-16"
+                },
+                "value": {
+                    "longFmt": "0"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 374,
+                    "fmt": "374",
+                    "longFmt": "374"
+                },
+                "maxAge": 1
+            },
+            {
+                "filerName": "LACOB JOSEPH S",
+                "transactionText": "Sale at price 285.78 - 293.00 per share.",
+                "ownership": "I",
+                "startDate": {
+                    "raw": 1526256000,
+                    "fmt": "2018-05-14"
+                },
+                "value": {
+                    "raw": 5788220,
+                    "fmt": "5.79M",
+                    "longFmt": "5,788,220"
+                },
+                "filerRelation": "Director",
+                "shares": {
+                    "raw": 20000,
+                    "fmt": "20k",
+                    "longFmt": "20,000"
+                },
+                "maxAge": 1
+            }
+        ],
+        "maxAge": 1
+    },
+    "insiderHolders": {
+        "holders": [
+            {
+                "maxAge": 1,
+                "name": "COLETTI JULIE ANN",
+                "relation": "Officer",
+                "transactionDescription": "Conversion of Exercise of derivative security",
+                "latestTransDate": {
+                    "raw": 1595203200,
+                    "fmt": "2020-07-20"
+                },
+                "positionDirect": {
+                    "raw": 887,
+                    "fmt": "887",
+                    "longFmt": "887"
+                },
+                "positionDirectDate": {
+                    "raw": 1595203200,
+                    "fmt": "2020-07-20"
+                }
+            },
+            {
+                "maxAge": 1,
+                "name": "HOCKRIDGE STUART A",
+                "relation": "Officer",
+                "transactionDescription": "Conversion of Exercise of derivative security",
+                "latestTransDate": {
+                    "raw": 1592524800,
+                    "fmt": "2020-06-19"
+                },
+                "positionDirect": {
+                    "raw": 9286,
+                    "fmt": "9.29k",
+                    "longFmt": "9,286"
+                },
+                "positionDirectDate": {
+                    "raw": 1592524800,
+                    "fmt": "2020-06-19"
+                }
+            },
+            {
+                "maxAge": 1,
+                "name": "LACOB JOSEPH S",
+                "relation": "Director",
+                "transactionDescription": "Sale",
+                "latestTransDate": {
+                    "raw": 1590624000,
+                    "fmt": "2020-05-28"
+                },
+                "positionIndirect": {
+                    "raw": 174360,
+                    "fmt": "174.36k",
+                    "longFmt": "174,360"
+                },
+                "positionIndirectDate": {
+                    "raw": 1590624000,
+                    "fmt": "2020-05-28"
+                }
+            },
+            {
+                "maxAge": 1,
+                "name": "MORICI JOHN F.",
+                "relation": "Chief Financial Officer",
+                "transactionDescription": "Sale",
+                "latestTransDate": {
+                    "raw": 1590710400,
+                    "fmt": "2020-05-29"
+                },
+                "positionDirect": {
+                    "raw": 3807,
+                    "fmt": "3.81k",
+                    "longFmt": "3,807"
+                },
+                "positionDirectDate": {
+                    "raw": 1590710400,
+                    "fmt": "2020-05-29"
+                }
+            },
+            {
+                "maxAge": 1,
+                "name": "OLSON JENNIFER",
+                "relation": "Officer",
+                "transactionDescription": "Sale",
+                "latestTransDate": {
+                    "raw": 1590105600,
+                    "fmt": "2020-05-22"
+                },
+                "positionDirect": {
+                    "raw": 6577,
+                    "fmt": "6.58k",
+                    "longFmt": "6,577"
+                },
+                "positionDirectDate": {
+                    "raw": 1590105600,
+                    "fmt": "2020-05-22"
+                }
+            },
+            {
+                "maxAge": 1,
+                "name": "PRESCOTT THOMAS M",
+                "relation": "Director",
+                "transactionDescription": "Sale",
+                "latestTransDate": {
+                    "raw": 1595980800,
+                    "fmt": "2020-07-29"
+                },
+                "positionDirect": {
+                    "raw": 102398,
+                    "fmt": "102.4k",
+                    "longFmt": "102,398"
+                },
+                "positionDirectDate": {
+                    "raw": 1595980800,
+                    "fmt": "2020-07-29"
+                }
+            },
+            {
+                "maxAge": 1,
+                "name": "SHAKED YUVAL",
+                "relation": "Officer",
+                "transactionDescription": "Conversion of Exercise of derivative security",
+                "latestTransDate": {
+                    "raw": 1595203200,
+                    "fmt": "2020-07-20"
+                },
+                "positionDirect": {
+                    "raw": 3236,
+                    "fmt": "3.24k",
+                    "longFmt": "3,236"
+                },
+                "positionDirectDate": {
+                    "raw": 1595203200,
+                    "fmt": "2020-07-20"
+                }
+            },
+            {
+                "maxAge": 1,
+                "name": "TAY JULIE",
+                "relation": "Officer",
+                "transactionDescription": "Sale",
+                "latestTransDate": {
+                    "raw": 1590105600,
+                    "fmt": "2020-05-22"
+                },
+                "positionDirect": {
+                    "raw": 25242,
+                    "fmt": "25.24k",
+                    "longFmt": "25,242"
+                },
+                "positionDirectDate": {
+                    "raw": 1590105600,
+                    "fmt": "2020-05-22"
+                }
+            },
+            {
+                "maxAge": 1,
+                "name": "THALER WARREN S",
+                "relation": "Director",
+                "transactionDescription": "Sale",
+                "latestTransDate": {
+                    "raw": 1596585600,
+                    "fmt": "2020-08-05"
+                },
+                "positionDirect": {
+                    "raw": 118405,
+                    "fmt": "118.41k",
+                    "longFmt": "118,405"
+                },
+                "positionDirectDate": {
+                    "raw": 1596585600,
+                    "fmt": "2020-08-05"
+                }
+            },
+            {
+                "maxAge": 1,
+                "name": "WRIGHT EMORY M",
+                "relation": "Officer",
+                "transactionDescription": "Stock Gift",
+                "latestTransDate": {
+                    "raw": 1590537600,
+                    "fmt": "2020-05-27"
+                },
+                "positionDirect": {
+                    "raw": 34087,
+                    "fmt": "34.09k",
+                    "longFmt": "34,087"
+                },
+                "positionDirectDate": {
+                    "raw": 1590537600,
+                    "fmt": "2020-05-27"
+                }
+            }
+        ],
+        "maxAge": 1
+    },
+    "netSharePurchaseActivity": {
+        "period": "6m",
+        "netPercentInsiderShares": {
+            "raw": 0.031,
+            "fmt": "3.10%"
+        },
+        "netInfoCount": {
+            "raw": 43,
+            "fmt": "43",
+            "longFmt": "43"
+        },
+        "totalInsiderShares": {
+            "raw": 6555052,
+            "fmt": "6.56M",
+            "longFmt": "6,555,052"
+        },
+        "buyInfoShares": {
+            "raw": 282675,
+            "fmt": "282.68k",
+            "longFmt": "282,675"
+        },
+        "buyPercentInsiderShares": {
+            "raw": 0.044,
+            "fmt": "4.40%"
+        },
+        "sellInfoCount": {
+            "raw": 9,
+            "fmt": "9",
+            "longFmt": "9"
+        },
+        "sellInfoShares": {
+            "raw": 88378,
+            "fmt": "88.38k",
+            "longFmt": "88,378"
+        },
+        "sellPercentInsiderShares": {
+            "raw": 0.0139999995,
+            "fmt": "1.40%"
+        },
+        "maxAge": 1,
+        "buyInfoCount": {
+            "raw": 34,
+            "fmt": "34",
+            "longFmt": "34"
+        },
+        "netInfoShares": {
+            "raw": 194297,
+            "fmt": "194.3k",
+            "longFmt": "194,297"
+        }
+    },
+    "majorHoldersBreakdown": {
+        "maxAge": 1,
+        "insidersPercentHeld": {
+            "raw": 0.0832,
+            "fmt": "8.32%"
+        },
+        "institutionsPercentHeld": {
+            "raw": 0.87224996,
+            "fmt": "87.22%"
+        },
+        "institutionsFloatPercentHeld": {
+            "raw": 0.9514,
+            "fmt": "95.14%"
+        },
+        "institutionsCount": {
+            "raw": 945,
+            "fmt": "945",
+            "longFmt": "945"
+        }
+    },
+    "financialData": {
+        "ebitdaMargins": {
+            "raw": 0.16669,
+            "fmt": "16.67%"
+        },
+        "profitMargins": {
+            "raw": 0.7875,
+            "fmt": "78.75%"
+        },
+        "grossMargins": {
+            "raw": 0.70737,
+            "fmt": "70.74%"
+        },
+        "operatingCashflow": {
+            "raw": 522392992,
+            "fmt": "522.39M",
+            "longFmt": "522,392,992"
+        },
+        "revenueGrowth": {
+            "raw": -0.413,
+            "fmt": "-41.30%"
+        },
+        "operatingMargins": {
+            "raw": 0.12425,
+            "fmt": "12.43%"
+        },
+        "ebitda": {
+            "raw": 360112992,
+            "fmt": "360.11M",
+            "longFmt": "360,112,992"
+        },
+        "targetLowPrice": {
+            "raw": 245,
+            "fmt": "245.00"
+        },
+        "recommendationKey": "buy",
+        "grossProfits": {
+            "raw": 1743897000,
+            "fmt": "1.74B",
+            "longFmt": "1,743,897,000"
+        },
+        "freeCashflow": {
+            "raw": 341845504,
+            "fmt": "341.85M",
+            "longFmt": "341,845,504"
+        },
+        "targetMedianPrice": {
+            "raw": 332.5,
+            "fmt": "332.50"
+        },
+        "currentPrice": {
+            "raw": 306.96,
+            "fmt": "306.96"
+        },
+        "currentRatio": {
+            "raw": 1.221,
+            "fmt": "1.22"
+        },
+        "returnOnAssets": {
+            "raw": 0.05266,
+            "fmt": "5.27%"
+        },
+        "numberOfAnalystOpinions": {
+            "raw": 14,
+            "fmt": "14",
+            "longFmt": "14"
+        },
+        "targetMeanPrice": {
+            "raw": 325.21,
+            "fmt": "325.21"
+        },
+        "debtToEquity": {
+            "raw": 2.512,
+            "fmt": "2.51"
+        },
+        "returnOnEquity": {
+            "raw": 0.80654997,
+            "fmt": "80.65%"
+        },
+        "targetHighPrice": {
+            "raw": 400,
+            "fmt": "400.00"
+        },
+        "totalCash": {
+            "raw": 404359008,
+            "fmt": "404.36M",
+            "longFmt": "404,359,008"
+        },
+        "totalDebt": {
+            "raw": 71479000,
+            "fmt": "71.48M",
+            "longFmt": "71,479,000"
+        },
+        "totalRevenue": {
+            "raw": 2160404992,
+            "fmt": "2.16B",
+            "longFmt": "2,160,404,992"
+        },
+        "totalCashPerShare": {
+            "raw": 5.132,
+            "fmt": "5.13"
+        },
+        "financialCurrency": "USD",
+        "maxAge": 86400,
+        "revenuePerShare": {
+            "raw": 27.411,
+            "fmt": "27.41"
+        },
+        "quickRatio": {
+            "raw": 1.009,
+            "fmt": "1.01"
+        },
+        "recommendationMean": {
+            "raw": 2.1,
+            "fmt": "2.10"
+        }
+    },
+    "quoteType": {
+        "exchange": "NMS",
+        "shortName": "Align Technology, Inc.",
+        "longName": "Align Technology, Inc.",
+        "exchangeTimezoneName": "America/New_York",
+        "exchangeTimezoneShortName": "EDT",
+        "gmtOffSetMilliseconds": "-14400000",
+        "quoteType": "EQUITY",
+        "symbol": "ALGN",
+        "messageBoardId": "finmb_24568",
+        "market": "us_market"
+    },
+    "institutionOwnership": {
+        "maxAge": 1
+    },
+    "calendarEvents": {
+        "maxAge": 1,
+        "earnings": {
+            "earningsDate": [
+                {
+                    "raw": 1603238400,
+                    "fmt": "2020-10-21"
+                }
+            ],
+            "earningsAverage": {
+                "raw": 0.53,
+                "fmt": "0.53"
+            },
+            "earningsLow": {
+                "raw": -0.05,
+                "fmt": "-0.05"
+            },
+            "earningsHigh": {
+                "raw": 1.72,
+                "fmt": "1.72"
+            },
+            "revenueAverage": {
+                "raw": 516580000,
+                "fmt": "516.58M",
+                "longFmt": "516,580,000"
+            },
+            "revenueLow": {
+                "raw": 452500000,
+                "fmt": "452.5M",
+                "longFmt": "452,500,000"
+            },
+            "revenueHigh": {
+                "raw": 665100000,
+                "fmt": "665.1M",
+                "longFmt": "665,100,000"
+            }
+        }
+    },
+    "summaryDetail": {
+        "previousClose": {
+            "raw": 312.22,
+            "fmt": "312.22"
+        },
+        "regularMarketOpen": {
+            "raw": 311.01,
+            "fmt": "311.01"
+        },
+        "twoHundredDayAverage": {
+            "raw": 241.11035,
+            "fmt": "241.11"
+        },
+        "payoutRatio": {
+            "fmt": "0.00%"
+        },
+        "regularMarketDayHigh": {
+            "raw": 312.89,
+            "fmt": "312.89"
+        },
+        "averageDailyVolume10Day": {
+            "raw": 570200,
+            "fmt": "570.2k",
+            "longFmt": "570,200"
+        },
+        "regularMarketPreviousClose": {
+            "raw": 312.22,
+            "fmt": "312.22"
+        },
+        "fiftyDayAverage": {
+            "raw": 294.67572,
+            "fmt": "294.68"
+        },
+        "open": {
+            "raw": 311.01,
+            "fmt": "311.01"
+        },
+        "averageVolume10days": {
+            "raw": 570200,
+            "fmt": "570.2k",
+            "longFmt": "570,200"
+        },
+        "beta": {
+            "raw": 1.984065,
+            "fmt": "1.98"
+        },
+        "regularMarketDayLow": {
+            "raw": 305.715,
+            "fmt": "305.71"
+        },
+        "priceHint": {
+            "raw": 2,
+            "fmt": "2",
+            "longFmt": "2"
+        },
+        "currency": "USD",
+        "trailingPE": {
+            "raw": 14.297825,
+            "fmt": "14.30"
+        },
+        "regularMarketVolume": {
+            "raw": 334245,
+            "fmt": "334.25k",
+            "longFmt": "334,245"
+        },
+        "marketCap": {
+            "raw": 24184365056,
+            "fmt": "24.18B",
+            "longFmt": "24,184,365,056"
+        },
+        "averageVolume": {
+            "raw": 926270,
+            "fmt": "926.27k",
+            "longFmt": "926,270"
+        },
+        "priceToSalesTrailing12Months": {
+            "raw": 11.194366,
+            "fmt": "11.19"
+        },
+        "dayLow": {
+            "raw": 305.715,
+            "fmt": "305.71"
+        },
+        "ask": {
+            "raw": 306.92,
+            "fmt": "306.92"
+        },
+        "askSize": {
+            "raw": 900,
+            "fmt": "900",
+            "longFmt": "900"
+        },
+        "volume": {
+            "raw": 334245,
+            "fmt": "334.25k",
+            "longFmt": "334,245"
+        },
+        "fiftyTwoWeekHigh": {
+            "raw": 326.36,
+            "fmt": "326.36"
+        },
+        "forwardPE": {
+            "raw": 44.68122,
+            "fmt": "44.68"
+        },
+        "maxAge": 1,
+        "fiftyTwoWeekLow": {
+            "raw": 127.88,
+            "fmt": "127.88"
+        },
+        "bid": {
+            "raw": 305.03,
+            "fmt": "305.03"
+        },
+        "bidSize": {
+            "raw": 900,
+            "fmt": "900",
+            "longFmt": "900"
+        },
+        "dayHigh": {
+            "raw": 312.89,
+            "fmt": "312.89"
+        }
+    },
+    "symbol": "ALGN",
+    "upgradeDowngradeHistory": {
+        "history": [
+            {
+                "epochGradeDate": 1596025185,
+                "firm": "Berenberg",
+                "toGrade": "Hold",
+                "fromGrade": "Buy",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1595517489,
+                "firm": "Barclays",
+                "toGrade": "Equal-Weight",
+                "fromGrade": "Overweight",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1595510110,
+                "firm": "Piper Sandler",
+                "toGrade": "Overweight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1595503540,
+                "firm": "SVB Leerink",
+                "toGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1595250772,
+                "firm": "B of A Securities",
+                "toGrade": "Underperform",
+                "fromGrade": "Neutral",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1594722184,
+                "firm": "SVB Leerink",
+                "toGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1588344914,
+                "firm": "UBS",
+                "toGrade": "Neutral",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1588252729,
+                "firm": "Credit Suisse",
+                "toGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1584614348,
+                "firm": "Stephens & Co.",
+                "toGrade": "Equal-Weight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1584107360,
+                "firm": "Stifel",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1580477047,
+                "firm": "UBS",
+                "toGrade": "Neutral",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1580226653,
+                "firm": "UBS",
+                "toGrade": "Neutral",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1574081407,
+                "firm": "Stifel",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1570448752,
+                "firm": "Barclays",
+                "toGrade": "Overweight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1564150186,
+                "firm": "Baird",
+                "toGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1564050998,
+                "firm": "Evercore ISI Group",
+                "toGrade": "In-Line",
+                "fromGrade": "Outperform",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1556199327,
+                "firm": "Barclays",
+                "toGrade": "Overweight",
+                "fromGrade": "Overweight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1551790894,
+                "firm": "Baird",
+                "toGrade": "Outperform",
+                "fromGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1550146283,
+                "firm": "UBS",
+                "toGrade": "Neutral",
+                "fromGrade": "Buy",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1546616533,
+                "firm": "Morgan Stanley",
+                "toGrade": "Equal-Weight",
+                "fromGrade": "Equal-Weight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1542723717,
+                "firm": "Credit Suisse",
+                "toGrade": "Outperform",
+                "fromGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1540485367,
+                "firm": "Morgan Stanley",
+                "toGrade": "Equal-Weight",
+                "fromGrade": "Equal-Weight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1540485209,
+                "firm": "Credit Suisse",
+                "toGrade": "Outperform",
+                "fromGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1540481328,
+                "firm": "Baird",
+                "toGrade": "Outperform",
+                "fromGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1539084878,
+                "firm": "Morgan Stanley",
+                "toGrade": "Equal-Weight",
+                "fromGrade": "Equal-Weight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1532610514,
+                "firm": "Credit Suisse",
+                "toGrade": "Outperform",
+                "fromGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1532604771,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "fromGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1531481660,
+                "firm": "Morgan Stanley",
+                "toGrade": "Equal-Weight",
+                "fromGrade": "Equal-Weight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1531481234,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "fromGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1527262156,
+                "firm": "Credit Suisse",
+                "toGrade": "Outperform",
+                "fromGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1527169716,
+                "firm": "PiperJaffray",
+                "toGrade": "Overweight",
+                "fromGrade": "Overweight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1527162995,
+                "firm": "Leerink Swann",
+                "toGrade": "Outperform",
+                "fromGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1526987713,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "fromGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1526906458,
+                "firm": "Barclays",
+                "toGrade": "Overweight",
+                "fromGrade": "Overweight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1524750263,
+                "firm": "Credit Suisse",
+                "toGrade": "Outperform",
+                "fromGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1524748333,
+                "firm": "Barclays",
+                "toGrade": "Overweight",
+                "fromGrade": "Overweight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1524747014,
+                "firm": "Morgan Stanley",
+                "toGrade": "Equal-Weight",
+                "fromGrade": "Equal-Weight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1524743312,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "fromGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1524136644,
+                "firm": "Morgan Stanley",
+                "toGrade": "Equal-Weight",
+                "fromGrade": "Overweight",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1517409775,
+                "firm": "Credit Suisse",
+                "toGrade": "Outperform",
+                "fromGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1517405822,
+                "firm": "Leerink Swann",
+                "toGrade": "Outperform",
+                "fromGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1517314285,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "fromGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1516378958,
+                "firm": "Stephens & Co.",
+                "toGrade": "Equal-Weight",
+                "fromGrade": "Overweight",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1509123623,
+                "firm": "Credit Suisse",
+                "toGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1509106114,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1508765226,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1507304894,
+                "firm": "Morgan Stanley",
+                "toGrade": "Overweight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1501252197,
+                "firm": "Leerink Swann",
+                "toGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1501251642,
+                "firm": "Bank of America",
+                "toGrade": "Buy",
+                "fromGrade": "Neutral",
+                "action": "up"
+            },
+            {
+                "epochGradeDate": 1500310163,
+                "firm": "Morgan Stanley",
+                "toGrade": "Overweight",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1493382063,
+                "firm": "Baird",
+                "toGrade": "Outperform",
+                "fromGrade": "Neutral",
+                "action": "up"
+            },
+            {
+                "epochGradeDate": 1480354953,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1475491508,
+                "firm": "Baird",
+                "toGrade": "Neutral",
+                "fromGrade": "Overweight",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1469707184,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1462947582,
+                "firm": "Credit Suisse",
+                "toGrade": "Outperform",
+                "action": "init"
+            },
+            {
+                "epochGradeDate": 1458706752,
+                "firm": "Roth Capital",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1447837905,
+                "firm": "PiperJaffray",
+                "toGrade": "Overweight",
+                "action": "init"
+            },
+            {
+                "epochGradeDate": 1445604844,
+                "firm": "Jefferies",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1437735600,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1429590271,
+                "firm": "Morgan Stanley",
+                "toGrade": "Overweight",
+                "fromGrade": "Equal-Weight",
+                "action": "up"
+            },
+            {
+                "epochGradeDate": 1422608400,
+                "firm": "Jefferies",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1422597033,
+                "firm": "JMP Securities",
+                "toGrade": "Market Perform",
+                "fromGrade": "Market Outperform",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1420156800,
+                "firm": "Baird",
+                "toGrade": "Outperform",
+                "fromGrade": "Neutral",
+                "action": "up"
+            },
+            {
+                "epochGradeDate": 1413800054,
+                "firm": "Credit Suisse",
+                "toGrade": "Outperform",
+                "fromGrade": "Neutral",
+                "action": "up"
+            },
+            {
+                "epochGradeDate": 1413792000,
+                "firm": "Goldman Sachs",
+                "toGrade": "Buy",
+                "fromGrade": "Neutral",
+                "action": "up"
+            },
+            {
+                "epochGradeDate": 1406248769,
+                "firm": "Jefferies",
+                "toGrade": "Hold",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1398303603,
+                "firm": "Credit Suisse",
+                "toGrade": "Neutral",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1396852472,
+                "firm": "Barrington Research",
+                "toGrade": "Outperform",
+                "fromGrade": "Market Perform",
+                "action": "up"
+            },
+            {
+                "epochGradeDate": 1390980361,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1382081018,
+                "firm": "Cantor Fitzgerald",
+                "toGrade": "Buy",
+                "fromGrade": "Hold",
+                "action": "up"
+            },
+            {
+                "epochGradeDate": 1380876602,
+                "firm": "Baird",
+                "toGrade": "Neutral",
+                "fromGrade": "Outperform",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1379409328,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1373444695,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1372698277,
+                "firm": "Baird",
+                "toGrade": "Outperform",
+                "action": "init"
+            },
+            {
+                "epochGradeDate": 1371457076,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1369724197,
+                "firm": "Jefferies",
+                "toGrade": "Hold",
+                "fromGrade": "Buy",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1369065388,
+                "firm": "Barrington Research",
+                "toGrade": "Market Perform",
+                "fromGrade": "Outperform",
+                "action": "down"
+            },
+            {
+                "epochGradeDate": 1359965783,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1359623548,
+                "firm": "Stephens & Co.",
+                "toGrade": "Overweight",
+                "fromGrade": "Equal-Weight",
+                "action": "up"
+            },
+            {
+                "epochGradeDate": 1359618232,
+                "firm": "Jefferies",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1359477668,
+                "firm": "Janney Capital",
+                "toGrade": "Buy",
+                "action": "init"
+            },
+            {
+                "epochGradeDate": 1357196653,
+                "firm": "Morgan Stanley",
+                "toGrade": "Equal-Weight",
+                "fromGrade": "Underperform",
+                "action": "up"
+            },
+            {
+                "epochGradeDate": 1355206223,
+                "firm": "Goldman Sachs",
+                "toGrade": "Neutral",
+                "action": "init"
+            },
+            {
+                "epochGradeDate": 1354789556,
+                "firm": "Cantor Fitzgerald",
+                "toGrade": "Hold",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1352365200,
+                "firm": "Stifel Nicolaus",
+                "toGrade": "Buy",
+                "action": "init"
+            },
+            {
+                "epochGradeDate": 1350549120,
+                "firm": "Cantor Fitzgerald",
+                "toGrade": "Hold",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1350545640,
+                "firm": "Jefferies",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1342766820,
+                "firm": "Jefferies",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1337667660,
+                "firm": "Cantor Fitzgerald",
+                "toGrade": "Buy",
+                "action": "init"
+            },
+            {
+                "epochGradeDate": 1335353160,
+                "firm": "Barrington Research",
+                "toGrade": "Outperform",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1335252360,
+                "firm": "Jefferies",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1335250140,
+                "firm": "Jefferies",
+                "toGrade": "Buy",
+                "action": "main"
+            },
+            {
+                "epochGradeDate": 1330322400,
+                "firm": "Morgan Stanley",
+                "toGrade": "Underweight",
+                "action": "main"
+            }
+        ],
+        "maxAge": 86400
+    },
+    "pageViews": {
+        "shortTermTrend": "UP",
+        "midTermTrend": "UP",
+        "longTermTrend": "UP",
+        "maxAge": 1
+    },
+    "quoteData": {
+        "ALGN": {
+            "sourceInterval": 15,
+            "quoteSourceName": "Delayed Quote",
+            "regularMarketOpen": {
+                "raw": 311.01,
+                "fmt": "311.01"
+            },
+            "exchange": "NMS",
+            "regularMarketTime": {
+                "raw": 1597435201,
+                "fmt": "4:00PM EDT"
+            },
+            "fiftyTwoWeekRange": {
+                "raw": "127.88 - 326.36",
+                "fmt": "127.88 - 326.36"
+            },
+            "sharesOutstanding": {
+                "raw": 78786704,
+                "fmt": "78.787M",
+                "longFmt": "78,786,704"
+            },
+            "regularMarketDayHigh": {
+                "raw": 312.89,
+                "fmt": "312.89"
+            },
+            "shortName": "Align Technology, Inc.",
+            "longName": "Align Technology, Inc.",
+            "exchangeTimezoneName": "America/New_York",
+            "regularMarketChange": {
+                "raw": -5.26001,
+                "fmt": "-5.26"
+            },
+            "regularMarketPreviousClose": {
+                "raw": 312.22,
+                "fmt": "312.22"
+            },
+            "fiftyTwoWeekHighChange": {
+                "raw": -19.399994,
+                "fmt": "-19.40"
+            },
+            "exchangeTimezoneShortName": "EDT",
+            "fiftyTwoWeekLowChange": {
+                "raw": 179.07999,
+                "fmt": "179.08"
+            },
+            "regularMarketDayLow": {
+                "raw": 305.715,
+                "fmt": "305.71"
+            },
+            "priceHint": 2,
+            "currency": "USD",
+            "regularMarketPrice": {
+                "raw": 306.96,
+                "fmt": "306.96"
+            },
+            "regularMarketVolume": {
+                "raw": 334245,
+                "fmt": "334,245",
+                "longFmt": "334,245"
+            },
+            "triggerable": true,
+            "gmtOffSetMilliseconds": -14400000,
+            "firstTradeDateMilliseconds": 980865000000,
+            "region": "US",
+            "marketState": "CLOSED",
+            "marketCap": {
+                "raw": 24184365056,
+                "fmt": "24.184B",
+                "longFmt": "24,184,365,056"
+            },
+            "quoteType": "EQUITY",
+            "symbol": "ALGN",
+            "language": "en-US",
+            "fiftyTwoWeekLowChangePercent": {
+                "raw": 1.4003752,
+                "fmt": "140.04%"
+            },
+            "regularMarketDayRange": {
+                "raw": "305.715 - 312.89",
+                "fmt": "305.71 - 312.89"
+            },
+            "messageBoardId": "finmb_24568",
+            "fiftyTwoWeekHigh": {
+                "raw": 326.36,
+                "fmt": "326.36"
+            },
+            "fiftyTwoWeekHighChangePercent": {
+                "raw": -0.059443545,
+                "fmt": "-5.94%"
+            },
+            "uuid": "9e9b4176-3211-32f0-9c92-47cd8723fc54",
+            "market": "us_market",
+            "fiftyTwoWeekLow": {
+                "raw": 127.88,
+                "fmt": "127.88"
+            },
+            "regularMarketChangePercent": {
+                "raw": -1.6847126,
+                "fmt": "-1.68%"
+            },
+            "fullExchangeName": "NasdaqGS"
+        }
+    }
+}

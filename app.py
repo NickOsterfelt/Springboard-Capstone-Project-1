@@ -45,6 +45,7 @@ def do_logout():
     """Logout user."""
 
     if CURR_USER_KEY in session:
+        g.user = None
         del session[CURR_USER_KEY]
     #else:
         #exception
@@ -95,23 +96,40 @@ def login():
 
         if user:
             do_login(user)
-            flash(f"Hello, {user.username}, login successful!", "good")
+            flash(f"Hello, {user.username}, login successful!", "success")
             return redirect('/')
 
         flash("Invalid username/password combonation", "danger")
         return redirect('/login')
 
     return render_template('users/login.html', form = form)
+@app.route('/stocks')
+def show_stocks():
+    if g.user:
+        return render_template("/stocks/index.html")
 
+    return redirect('/')
+        
 @app.route('/stocks/<int:stock_id>')
 def show_stock(stock_id):
-    s = Stock.query.get(stock_id)
-    if not Stock.get_update([s]):
-        flash("rapidapi error updating stock data", "danger")
-    return render_template('/stocks/details')
+    if g.user:
+        stock = Stock.query.get(stock_id)
+        #data = Stock.get_update(stock_id, True)
+        data = {"test":{}}
+        if not data:                                   #WARNING CALLS API ENEABLE LATER
+            flash("Error getting update from external API", "danger")
+            return redirect("/")
+
+        return render_template('/stocks/details.html', stock=stock, data=data)
+
+    return redirect('/')
 
 @app.route('/logout')
 def logout():
-    do_logout()
+    """Do Logout"""
+    if g.user:
+        flash("See you later! Logout Successful.", "success")
+        do_logout()
+    
     return redirect('/')
     

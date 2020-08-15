@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
     {% block links %}{% endblock %}
     <link rel="stylesheet" href="/static/stylesheets/style.css">
     <title>Stock-app</title>
@@ -28,22 +28,24 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Search Stocks</a>
+            <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/stocks">Search Stocks</a>
             <a class="nav-item nav-link" href="#">Manage Portfolio</a>
-            <a class="nav-item nav-link" href="#">Account</a>
+            <a class="nav-item nav-link" href="/user/edit">Account</a>
+            <a href="nav-item nav-link" href="/users">Leader Boards</a>
+            <a class="nav-item nav-link text-danger" href="/logout">Logout</a>
           </div>
         </div>
       </nav>
       
     {% for category, message in get_flashed_messages(with_categories=True) %}
-    <div class="alert {{ category }}">
+    <div class="alert alert-{{ category }}">
         <span class="text-danger" id="close-message-x">&times;</span>
         {{ message }}
     </div>
       {% endfor %}
 
-    <div class="container p-5 {% block page_class %}{% endblock %}">
+    <div class="container p-5{% block page_class %}{% endblock %}">
         
 
         {% block content %}
@@ -62,6 +64,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+        {% block scripts %} {% endblock %}
 
 </body>
 
