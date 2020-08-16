@@ -1,0 +1,16 @@
+.ui-autocomplete {
+    z-index: 100;
+    }
+
+.ui-menu-item{
+        background : rgb(215, 215, 215);;  
+        border : 1px solid white;
+        list-style-type: none;
+        cursor : pointer;
+        max-width: 60%;
+        left: 10%;
+}
+
+.ui-helper-hidden-accessible{
+    display:none;
+}

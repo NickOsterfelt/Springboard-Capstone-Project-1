@@ -17,3 +17,7 @@ hr{
 #amount {
     border: 1px solid black;
 }
+th {
+    background: #3f3f3f;
+    color: white;
+}

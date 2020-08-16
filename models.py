@@ -162,6 +162,7 @@ class User(db.Model):
         backref="bought_by"
     )
 
+
     @classmethod
     def signup(cls, username, password):
         """Sign up user.

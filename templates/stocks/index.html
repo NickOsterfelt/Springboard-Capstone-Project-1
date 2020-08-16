@@ -1,34 +1,36 @@
 {% extends 'base-home.html' %}
-{% block links %} {% endblock %}
+{% block links %}
+<link rel="stylesheet" href="static/stylesheets/stock-index.css">
+{% endblock %}
 
 {% block content %}
 
 
 <div class="row h-100">
-    <div class="col-12 my-5">
+    <div class="col-12 py-3">
         <div class="jumbotron bg-dark py-5 my-0">
             <h3 class="display-5 ml-5 pl-5 pb-2 text-light">Search stocks by symbol or name</h3>
-            <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-
-                <button class="btn btn-dark p-0" type="submit"><i class="fa fa-search text-light fa-lg"
+            <form class="form-inline d-flex justify-content-center md-form form-sm mt-0" action="/stocks" method="POST"> 
+                
+                <button class="btn btn-dark p-2 m-2" type="submit"><i class="fa fa-search text-light fa-lg"
                         aria-hidden="true"></i></button>
-                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                    aria-label="Search">
-            </form>
-        </div>
 
-        <div class="container-fluid my-0 py-3 bg-light">
-            <ul>
-                <li>test</li>
-                <li>test</li>
-                <li>test</li>
-                <li>test</li>
-                <li>test</li>
-                <li>test</li>
-                <li>test</li>
-                <li>test</li>
-                <li>test</li>
-            </ul>
+                    {{ form.hidden_tag() }}
+
+                    {% for field in form if field.widget.input_type != 'hidden' %}
+                    {% for error in field.errors %}
+                    <span class="text-danger">{{ error }}</span>
+                    {% endfor %}
+    
+                    {{ field(placeholder=field.label.text, class="form-control p-2 w-75", id="search-input") }}
+                    {% endfor %}
+    
+                   
+                            
+              
+                        
+               
+            </form>
         </div>
     </div>
 </div>
@@ -37,4 +39,7 @@
 {% endblock %}
 {% block scripts %}
 
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/static/scripts/auto-complete-input.js"></script>
+<script src="/static/scripts/stock-index.js"></script>
 {% endblock %}

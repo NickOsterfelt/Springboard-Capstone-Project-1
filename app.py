@@ -10,7 +10,7 @@ from flask import request
 import requests
 
 from models import db, connect_db, User, Stock, Owned_Stock, Transaction
-from forms import LoginSignupForm, StockTransactionForm
+from forms import LoginSignupForm, StockTransactionForm, StockSearchForm
 from secrets import keys
 
 app = Flask(__name__)
@@ -117,14 +117,27 @@ def logout():
     return redirect('/')
 
 #********************************** STOCK ROUTES ****************************************
-@app.route('/stocks')
+@app.route('/stocks', methods=['GET', 'POST'])
 def show_stocks():
     if g.user:
-        return render_template("/stocks/index.html")
+
+        form = StockSearchForm()
+
+        if form.validate_on_submit():
+            input_val = form.search._value()
+            symbol = input_val[input_val.find("(")+1:input_val.find(")")]
+            
+            s = Stock.query.filter(Stock.stock_symbol == symbol).one()
+            
+            return redirect(f'/stocks/{s.id}')
+            #return redirect(f"/stocks/{stock_id}")
+
+        
+        return render_template("/stocks/index.html", form=form)
 
     return redirect('/')
         
-@app.route('/stocks/<int:stock_id>')
+@app.route('/stocks/<int:stock_id>', methods=['GET', 'POST'])
 def show_stock(stock_id):
     if g.user:
 
@@ -132,7 +145,9 @@ def show_stock(stock_id):
         
         if(form.validate_on_submit()):
                 #handle buying/selling
-            flash("Transaction Successful!" )
+
+
+            flash("Transaction Successful!", "success" )
             return redirect(f"/stocks/{stock_id}")
 
         else:
@@ -145,20 +160,36 @@ def show_stock(stock_id):
                 flash("Error getting update from external API", "danger")
                 return redirect("/")
 
-        return render_template('/stocks/details.html', stock=stock, data=data, form = form)  #data will be stock.data when get_update is running
+        return render_template('/stocks/details.html', stock=stock, data=data, form=form)  #data will be stock.data when get_update is running
 
     return redirect('/')
 
 
+    
+        
+
 
 # *********************************** API ************************************************
-@app.route('/api/<int:stock_id>')
-def get_stock_data(stock_id):
+@app.route('/api/stocks/<int:stock_id>')
+def get_stock_json(stock_id):
     if g.user:
         stock = Stock.query.get(stock_id)
         return jsonify(stock.data)
     else:
         return "unauthorized access", 401
 
+@app.route('/api/stocks')
+def get_stock_name_list():
+    data = []
+    if g.user:
+        stocks = Stock.query.all()
+        for s in stocks:
+            r = f"{s.name} ({s.stock_symbol})"
+            data.append(r)
+        with open('test.txt', 'w') as f:
+            for item in data:
+                f.write("\"%s\","  % item)
+        return jsonify({"stock_names": [data]})
+    else:
+        return "unauthorized access", 401
 
-    
