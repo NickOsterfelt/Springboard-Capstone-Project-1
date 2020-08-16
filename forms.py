@@ -11,8 +11,7 @@ class LoginSignupForm(FlaskForm):
 
 class StockTransactionForm(FlaskForm):
     amount = IntegerField("# of shares", validators=[InputRequired(message="Enter an amount"), NumberRange(min=1)])
-    transactionType = RadioField(choices=[("buy", "Buy" ), ("sell", "Sell")], default="buy")
+    transaction_type = RadioField(choices=[("buy", "Buy" ), ("sell", "Sell")], default="buy")
 
 class StockSearchForm(FlaskForm):
     search = StringField("Search", validators=[InputRequired(message="input required"), Length(max=50)])
-    

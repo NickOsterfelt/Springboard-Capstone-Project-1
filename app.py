@@ -144,8 +144,14 @@ def show_stock(stock_id):
         form = StockTransactionForm()
         
         if(form.validate_on_submit()):
-                #handle buying/selling
+            amount = form.amount
+            transaction_type = form.transaction_type
+            stock= Stock.query.get(stock_id)
+            value = stock.share_price
+            # if transaction_type == "buy":
 
+
+            # if transaction_type == "sell":
 
             flash("Transaction Successful!", "success" )
             return redirect(f"/stocks/{stock_id}")

@@ -61,6 +61,21 @@ class Transaction(db.Model):
         nullable=False
     )
 
+    @classmethod
+    def generate_transaction(cls, user, stock, amount, is_buy):
+        """Adds a transaction"""
+        t = Transaction()
+
+        t.user_id = user.id
+        t.stock_id = stock.id
+        
+        t.is_purchase = True if is_buy else False
+        t.quantity = amount
+        t.stock_value_at_time = stock.share_price
+        t.time = datetime.now()
+
+        db.session.add(t)
+        
 
 class Owned_Stock(db.Model):
     """Many to Many table of user's and the stocks that they currently own"""
@@ -98,16 +113,58 @@ class Owned_Stock(db.Model):
         db.Float,
         nullable=False
     )
+    @classmethod
+    def user_owns_stock(cls, user_id, stock_id):
+        """Returns the owned_stock or false if a given user owns a given stock"""
+        owned_stock = cls.query.filter(cls.user_id == user_id).filter(cls.stock_id == stock_id).all()
+        if owned_stock:
+            return owned_stock[0]
+        else:
+            return False
+
+    @classmethod
+    def add_owned_stock_for_user(cls, user, stock, amount):
+        """ Adds to existing owned_stock, or creates a new entry"""
+        owned_stock = Owned_Stock.user_owns_stock(user.id, stock.id)
+
+        if owned_stock:         #stock is already owned, then add to quanity and update value/time.
+            owned_stock.quantity += amount
+            owned_stock.value_when_purchased = stock.share_price
+            owned_stock.time = datetime.now()
+        else:                   #create a new owned stock entry
+            owned_stock = Owned_Stock()
+            owned_stock.user_id = user.id
+            owned_stock.stock_id = stock.id
+            owned_stock.quantity = amount
+            owned_stock.value_when_purchased = stock.share_price
+            owned_stock.time = datetime.now()
+
+        db.session.add(owned_stock)
+
+    @classmethod
+    def remove_owned_stock_for_user(cls, user, stock, amount):
+        """removes owned_stock. If amount is greater than currently owned quantity, then all will be removed"""
+        owned_stock = Owned_Stock.user_owns_stock(user.id, stock.id)
+        if owned_stock:             
+            if amount >= owned_stock.quantity:
+                db.session.delete(owned_stock)
+            else:
+                owned_stock.quantity -= amount
+                db.session.add(owned_stock)
+                    
 
     @classmethod
     def get_owned_stock_for_user(cls, user_id):
+        """gets stocks that are owned by users. returns owned_stock objects"""
         return cls.query \
             .join(User) \
             .filter(User.id == user_id) \
             .join(Stock) \
             .filter(Stock.id == Owned_Stock.stock_id) \
-            .add_columns(Stock.name) \
+            .add_columns(Stock.name, Stock.share_price) \
             .all()
+
+    
 
 
 class User(db.Model):
@@ -147,12 +204,12 @@ class User(db.Model):
         db.Float
     )
 
-    owned_stocks = db.relationship(  # join Owned_stocks table instead with user id to get
-        "Stock",  # user owned stocks
-        secondary="owned_stocks",
-        primaryjoin=(id == Owned_Stock.stock_id),
-        backref="owned_by"
-    )
+    # owned_stocks = db.relationship(  # join Owned_stocks table instead with user id to get
+    #     "Stock",  # user owned stocks         #BROKEN 
+    #     secondary="owned_stocks",
+    #     primaryjoin=(id == Owned_Stock.stock_id),
+    #     backref="owned_by"
+    # )
 
     user_transactions = db.relationship(  # TODO rewrite as Transactions @classmethod with joins.
         "Transaction",
@@ -161,6 +218,53 @@ class User(db.Model):
         secondaryjoin=(id == Transaction.stock_id),
         backref="bought_by"
     )
+    
+    def buy_stock(self, amount, stock_id):
+        stock = Stock.query.get(stock_id)
+        if self.current_money < (amount * stock.share_price):
+            return False                                        #TODO: make exception instead
+        else:
+            Transaction.generate_transaction(self, stock, amount, True)
+            Owned_Stock.add_owned_stock_for_user(self, stock, amount)
+            self.current_money -= (amount * stock.share_price)
+            self.update_asset_value()
+
+            db.session.add(self)
+        
+            db.session.commit()
+            return True
+    
+    def sell_stock(self, amount, stock_id):
+        stock = Stock.query.get(stock_id)
+        owned_stock = Owned_Stock.user_owns_stock(self.id, stock_id)
+
+        if owned_stock:
+            if amount > owned_stock.quantity:
+                amount = owned_stock.quantity 
+            
+            Transaction.generate_transaction(self, stock, amount, False)
+            Owned_Stock.remove_owned_stock_for_user(self, stock, amount)
+            self.current_money += (amount * stock.share_price)
+            self.update_asset_value()
+
+            db.session.add(self)
+        
+            db.session.commit()
+            return True
+        else:
+            return False            #TODO: make exceptions instead
+
+    def update_asset_value(self):
+        stocks = Owned_Stock.get_owned_stock_for_user(self.id)
+        dir(stocks)
+        val = 0
+        for stock in stocks:
+            val += (stock.Owned_Stock.quantity * stock.share_price)
+        
+        self.total_asset_value = val
+        
+
+        
 
 
     @classmethod
@@ -266,10 +370,7 @@ class Stock(db.Model):
 
         db.session.add(s)
         db.session.commit()
-
-        
-
-        
+       
         return True
 
     
