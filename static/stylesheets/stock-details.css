@@ -5,7 +5,15 @@ hr{
 }
 #summary {
     text-indent: 50px;
+    font-size: 14px;
 }
 .hidden{
     display: None;
+}
+
+#transaction-form, .form-control{
+    height: 100% !important;
+}
+#amount {
+    border: 1px solid black;
 }

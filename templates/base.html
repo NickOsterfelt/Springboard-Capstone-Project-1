@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container p-5 {% block page_class %}{% endblock %}">
+    <div class="container p-5 px-2 {% block page_class %}{% endblock %}">
         {% for category, message in get_flashed_messages(with_categories=True) %}
         <div class="alert alert-{{ category }}">{{ message }}</div>
         {% endfor %}

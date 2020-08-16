@@ -79,3 +79,8 @@ body{
 .text-align-center{
     text-align: center;
 }
+th {
+    background: #3f3f3f;
+    color: white;
+}
+

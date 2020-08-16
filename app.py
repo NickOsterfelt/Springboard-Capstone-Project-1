@@ -10,7 +10,7 @@ from flask import request
 import requests
 
 from models import db, connect_db, User, Stock, Owned_Stock, Transaction
-from forms import LoginSignupForm
+from forms import LoginSignupForm, StockTransactionForm
 from secrets import keys
 
 app = Flask(__name__)
@@ -127,16 +127,25 @@ def show_stocks():
 @app.route('/stocks/<int:stock_id>')
 def show_stock(stock_id):
     if g.user:
-        stock = Stock.query.get(stock_id)
-        #data = Stock.get_update(stock_id, True)    #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
-        data = {}
-        with open('sample.json') as json_file:         #loads sample data
-            data = json.load(json_file)
-        if not data:                                   
-            flash("Error getting update from external API", "danger")
-            return redirect("/")
 
-        return render_template('/stocks/details.html', stock=stock, data=data)
+        form = StockTransactionForm()
+        
+        if(form.validate_on_submit()):
+                #handle buying/selling
+            flash("Transaction Successful!" )
+            return redirect(f"/stocks/{stock_id}")
+
+        else:
+            stock = Stock.query.get(stock_id)
+            #data = Stock.get_update(stock_id, True)    #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
+            data = {}
+            with open('sample.json') as json_file:         #loads sample data
+                data = json.load(json_file)
+            if not data:                                   
+                flash("Error getting update from external API", "danger")
+                return redirect("/")
+
+        return render_template('/stocks/details.html', stock=stock, data=data, form = form)  #data will be stock.data when get_update is running
 
     return redirect('/')
 

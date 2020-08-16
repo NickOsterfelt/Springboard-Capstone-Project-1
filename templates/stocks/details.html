@@ -6,47 +6,102 @@
 {% block content %}
 <div class="hidden" id="stock-id" data-id="{{stock.id}}"></div>
 
-<div class="row h-100 bg-dark p-5">
-    <h3 class="display-5 text-light mb-2"><b>{{ stock.name }} ({{ stock.stock_symbol}})</b></h3>
+<div class="row h-100 bg-dark p-5 mx-0">
+    <h2 class="display-5 text-light mb-2"><b>{{ stock.name }} ({{ stock.stock_symbol}})</b></h2>
     <hr class="p-3 m-0">
 
     <div class="col-8 ">
+        <h5 class="display-5 text-light">Description</h5>
         <p class="text-light" id="summary">
             {{data['summaryProfile']['longBusinessSummary']}}
         </p>
+        <br>
+        <div class="container-fluid">
+            <p>*STOCK GRAPH HERE*</p>
+        </div>
 
     </div>
-    <div class="col-2">
-        <h4 class="display-5 text-light">Details</h4>
-    </div>
-    <div class="col-12">
-        <div class="accordion" id="accordion">
-            <div class="card">
-                <div class="card-header" id="heading">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#dataCollapse" id="get-data">
-                            Show All Data about this company
-                        </button>
-                    </h2>
-                </div>
-                <div id="dataCollapse" class="collapse " data-parent="#accordion">
-                    <div class="card-body">
-                        <ul id="all-data">
+    <div class="col-4 bg-light p-2 rounded">
+        <h4 class="display-5 text-dark">Overview</h4>
+        <div class="p-1">
+            <table class="table table-striped text-dark rounded">
+                <tbody class="">
+                    <tr>
+                        <th scope="row">Industry</th>
+                        <td>{{data['summaryProfile']['industry']}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Share Price</th>
+                        <td>${{stock.share_price}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">50 Day Average</th>
+                        <td>{{data['summaryDetail']['fiftyDayAverage']['fmt']}}</td>
+                    </tr>
 
-                        </ul>
-                    </div>
-                </div>
+                    <tr>
+                        <th scope="row">Operating Cash Flow</th>
+                        <td>{{data['financialData']['operatingCashflow']['fmt']}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Profit Margins</th>
+                        <td>{{data['financialData']['profitMargins']['fmt']}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="container-fluid mt-3">
+
+                <h5 class="display-5">Buy/Sell</h5>
+                <form method="POST" id="transaction_form">
+                    {{ form.hidden_tag() }}
+
+                    {% for field in form if field.widget.input_type != 'hidden' %}
+                    {% for error in field.errors %}
+                    <span class="text-danger">{{ error }}</span>
+                    {% endfor %}
+
+                    {{ field(placeholder=field.label.text, class="form-control p-2") }}
+                    {% endfor %}
+
+                    <button class="btn btn-primary m-1">Submit</button>
+
             </div>
-
-
         </div>
     </div>
+</div>
+<div class="col-8"></div>
+
+
+<div class="col-12 mt-5">
+    <div class="accordion" id="accordion">
+        <div class="card">
+            <div class="card-header" id="heading">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#dataCollapse"
+                        id="get-data">
+                        Show All Data
+                    </button>
+                </h2>
+            </div>
+            <div id="dataCollapse" class="collapse " data-parent="#accordion">
+                <div class="card-body">
+                    <ul id="all-data">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
 </div>
 </div>
 
 
 {% endblock %}
 {% block scripts %}
-    <script src="/static/scripts/stock-details.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/static/scripts/stock-details.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 {% endblock %}
