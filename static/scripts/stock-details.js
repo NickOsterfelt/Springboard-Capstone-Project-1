@@ -7,7 +7,7 @@ const stockId = parseInt($('#stock-id').attr('data-id'), 10);
 // const axios = require('axios');
 
 async function get_all_data() {
-    res = await axios.get(`${API_URL}/stocks/${stockId}`);
+    res = await axios.get(`${API_URL}stocks/${stockId}`);
     return res.data
 }
 

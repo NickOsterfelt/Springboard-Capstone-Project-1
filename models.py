@@ -161,7 +161,7 @@ class Owned_Stock(db.Model):
             .filter(User.id == user_id) \
             .join(Stock) \
             .filter(Stock.id == Owned_Stock.stock_id) \
-            .add_columns(Stock.name, Stock.share_price) \
+            .add_columns(Stock.name, Stock.stock_symbol, Stock.share_price) \
             .all()
 
     

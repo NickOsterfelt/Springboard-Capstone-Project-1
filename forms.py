@@ -1,6 +1,6 @@
 """Forms for playlist app."""
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, FloatField, BooleanField, IntegerField, RadioField, SelectField
+from wtforms import StringField, PasswordField, FloatField, BooleanField, IntegerField, RadioField, SelectField, HiddenField
 from wtforms.validators import InputRequired, Email, Optional, Length, NumberRange
 
 class LoginSignupForm(FlaskForm):
@@ -13,5 +13,10 @@ class StockTransactionForm(FlaskForm):
     amount = IntegerField("# of shares", validators=[InputRequired(message="Enter an amount"), NumberRange(min=1)])
     transaction_type = RadioField(choices=[("buy", "Buy" ), ("sell", "Sell")], default="buy")
 
+class StockTransactionPorfolioForm(StockTransactionForm):
+    stock_id = HiddenField()
+
 class StockSearchForm(FlaskForm):
     search = StringField("Search", validators=[InputRequired(message="input required"), Length(max=50)])
+
+

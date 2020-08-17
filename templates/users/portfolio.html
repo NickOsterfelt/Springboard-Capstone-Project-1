@@ -1,0 +1,71 @@
+{% extends 'base-home.html' %}
+{% block links %}
+<link rel="stylesheet" href="/static/stylesheets/user-portfolio.css">
+{% endblock %}
+
+{% block content %}
+<div class="hidden" id="stock-id" data-id=""></div>
+<h2 class="display-5 text-dark mb-2"><b>Your Porfolio</b></h2>
+<div class="row h-100 bg-dark p-5 mx-0">
+    <div class="col-12 text-light d-flex" id="summary">
+        <p>Current Money: {{g.user.current_money}}</p>
+        <p>Total Value of Stocks: {{g.user.total_asset_value}}</p>
+        <p>Combined Net Value: {{g.user.current_money + g.user.total_asset_value}}</p>
+    </div>
+   
+
+    <div class="col-12 bg-light p-2 rounded">
+        
+        <div class="p-1">
+            <table class="table table-striped text-light rounded">
+                <h4 class="display-5">Owned Stocks:</h4>
+                <thead>
+                    <tr>
+                        <th>Stock Name</th>
+                        <th>Symbol</th>
+                        <th>Amount Owned</th>
+                        <th>Share Price</th>
+                        <th>Value of Owned</th>
+                        <th>Buy/Sell</th>
+                    </tr>
+                </thead>
+                <tbody class="text-dark">
+                    {% for stock in stocks %}
+                        <tr>
+                            <td><a href="/stocks/{{stock.Owned_Stock.stock_id}}">{{stock.name}}</a></td>
+                            <td>{{stock.symbol}}</td>
+                            <td>{{stock.Owned_Stock.quantity}}</td>
+                            <td>{{stock.share_price}}</td>
+                            <td>{{stock.share_price * stock.Owned_Stock.quantity}}</td>
+                            <td>
+                                <form method="POST" class="transaction-form form-inline mt-0 pt-0">
+                                    {{ form.csrf_token() }}
+                                    
+                                    {% for field in form if field.widget.input_type != 'hidden' %}
+                                    {% for error in field.errors %}
+                                    <span class="text-danger">{{ error }}</span>
+                                    {% endfor %}
+                
+                                    {{ field(placeholder=field.label.text, class="form-control p-2") }}
+                                    {% endfor %}
+                                    {{form.stock_id(value=stock.Owned_Stock.stock_id )}}
+                                    
+                                    <button class="btn btn-primary m-1">Submit</button>
+                                    
+                                </form>
+                            </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

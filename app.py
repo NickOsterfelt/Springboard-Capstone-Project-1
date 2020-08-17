@@ -10,7 +10,7 @@ from flask import request
 import requests
 
 from models import db, connect_db, User, Stock, Owned_Stock, Transaction
-from forms import LoginSignupForm, StockTransactionForm, StockSearchForm
+from forms import LoginSignupForm, StockTransactionForm, StockSearchForm, StockTransactionPorfolioForm
 from secrets import keys
 
 app = Flask(__name__)
@@ -116,6 +116,49 @@ def logout():
     
     return redirect('/')
 
+# @app.route('/users/edit')
+# def edit_user():
+#     if g.user:
+#         form = 
+#     else:
+#         flash("unauthorized access", "danger")
+
+@app.route('/user/portfolio', methods=["GET", "POST"])
+def show_portfolio():
+    if g.user: 
+        form = StockTransactionPorfolioForm()
+        transaction_type = form.transaction_type.data
+        amount = form.amount.data
+        
+        if form.validate_on_submit():
+
+            if len(form.data['stock_id']) > 10:
+                raise Exception()               # malicious code handling?
+            stock_id = form.data['stock_id']
+            try: 
+                stock_id = int(stock_id)
+            except ValueError:
+                return redirect("/")
+            
+            if transaction_type == "buy":
+                if g.user.buy_stock(amount, stock_id):
+                    flash("Transaction Successful!", "success")
+                else:
+                    flash("Transaction Failed!", "danger")
+            if transaction_type == "sell":
+                if g.user.sell_stock(amount, stock_id):
+                    flash("Transaction Successful!", "success")
+                else:
+                    flash("Transaction Failed!", "danger")
+            
+            return redirect("/user/portfolio") 
+        else:
+            owned_stocks = Owned_Stock.get_owned_stock_for_user(g.user.id)
+            return render_template("/users/portfolio.html",stocks=owned_stocks, form=form)
+    else:
+        flash("Unauthorized Access", "danger")
+        return redirect('/')
+
 #********************************** STOCK ROUTES ****************************************
 @app.route('/stocks', methods=['GET', 'POST'])
 def show_stocks():
@@ -144,36 +187,39 @@ def show_stock(stock_id):
         form = StockTransactionForm()
         
         if(form.validate_on_submit()):
-            amount = form.amount
-            transaction_type = form.transaction_type
+            amount = form.amount.data
+            transaction_type = form.transaction_type.data
             stock= Stock.query.get(stock_id)
             value = stock.share_price
-            # if transaction_type == "buy":
-
-
-            # if transaction_type == "sell":
-
-            flash("Transaction Successful!", "success" )
+            if transaction_type == "buy":
+                
+                if g.user.buy_stock(amount, stock_id):
+                    flash("Transaction Successful!", "success")
+                else:
+                    flash("Transaction Failed!", "danger")
+            if transaction_type == "sell":
+                if g.user.sell_stock(amount, stock_id):
+                    flash("Transaction Successful!", "success")
+                else:
+                    flash("Transaction Failed!", "danger")
+        
             return redirect(f"/stocks/{stock_id}")
 
         else:
             stock = Stock.query.get(stock_id)
-            #data = Stock.get_update(stock_id, True)    #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
-            data = {}
-            with open('sample.json') as json_file:         #loads sample data
-                data = json.load(json_file)
-            if not data:                                   
+            currently_owned = Owned_Stock.get_owned_stock_for_user(g.user.id)
+            currently_owned = currently_owned[0].Owned_Stock.quantity if currently_owned else 0
+            if not Stock.get_update(stock_id, True):      #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
+            # data = {}
+            # with open('sample.json') as json_file:         #loads sample data
+            #     data = json.load(json_file)                                  
                 flash("Error getting update from external API", "danger")
                 return redirect("/")
 
-        return render_template('/stocks/details.html', stock=stock, data=data, form=form)  #data will be stock.data when get_update is running
+            data = stock.data
+            return render_template('/stocks/details.html', stock=stock, data=data, form=form, currently_owned=currently_owned)  #data will be stock.data when get_update is running
 
     return redirect('/')
-
-
-    
-        
-
 
 # *********************************** API ************************************************
 @app.route('/api/stocks/<int:stock_id>')

@@ -79,5 +79,7 @@ body{
 .text-align-center{
     text-align: center;
 }
-
+#close-message-x{
+    cursor: pointer;
+}
 

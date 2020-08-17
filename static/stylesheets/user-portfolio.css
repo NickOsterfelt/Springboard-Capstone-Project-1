@@ -1,0 +1,22 @@
+#summary{
+    justify-content: space-between ;
+}
+
+thead{
+    background-color: #4d4d4d;
+    color: white;
+}
+.hidden {
+    display: none;
+}
+
+.transaction-form input{
+    margin: 5px;
+    width: 40%;
+}
+.transaction-form button{
+    padding: 2px;
+    border: solid black 1px;
+    background-color: #1eb4e9;
+    color: black;
+}

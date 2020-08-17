@@ -51,21 +51,25 @@
             </table>
 
             <div class="container-fluid mt-3">
-
-                <h5 class="display-5">Buy/Sell</h5>
+                <span class="user-info mt-2">
+                    <p>Current Money: {{g.user.current_money}}</p> 
+                    <p>Current Amount Owned: {{currently_owned}}</p>
+                </span>
+                <h5 class="display-5">Buy/Sell </h5>
                 <form method="POST" id="transaction_form">
                     {{ form.hidden_tag() }}
-
+                    
                     {% for field in form if field.widget.input_type != 'hidden' %}
                     {% for error in field.errors %}
                     <span class="text-danger">{{ error }}</span>
                     {% endfor %}
 
-                    {{ field(placeholder=field.label.text, class="form-control p-2") }}
+                    {{ field(placeholder=field.label.text, class="form-control p-1") }}
                     {% endfor %}
-
+                    
                     <button class="btn btn-primary m-1">Submit</button>
-
+                    
+                </form>
             </div>
         </div>
     </div>
