@@ -29,23 +29,74 @@
             {% endfor%}
           </tbody>
         </table>
-
-        </ul>
-
       </div>
     </div>
-
   </div>
+
   <div class="col-4">
     <div class="container-fluid" id="home-section">
-      <h5 class="display-5" id="section-header">Overview:</h5>
+      <div class="row">
+        <h5 class="display-5 m-3" id="section-header">Leaderboard</h5>
+        <hr>
+        <table class="table table-striped details p-3">
+          <thead>
+            <tr>
+              <th>Ranking</th>
+              <th>Username</th>
+              <th>Total Asset Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% set count=1 %}
+            {% for user in users_list %}
+            <tr>
+              <td>{{loop.index}}</td>
+              <td>{{user.username}}</td>
+              <td>{{user.total_asset_value}}</td>
+            </tr>
+            {% set count=count+1 %}
+            {% endfor %}
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-1"></div>
+  <div class="col-10 mt-3">
+    <div class="container-fluid" id="home-section">
+      <h5 class="display-5" id="section-header">Transaction History:</h5>
       <hr>
       <div class="stock-list">
         <table class="table table-striped">
-          
+          <thead>
+            <tr>
+              <th scope="col">Stock</th>
+              <th scope="col">Date</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Value at Transaction Time</th>
+              <th scope="col">Transaction Type</th>
+            </tr>
+          <tbody>
 
-        </ul>
+            {% for transaction in transactions %}
+            <tr>
+              <td>{{}}</td>
+              <td>{{transaction.time}}</td>
+              <td>{{transaction.quantity}}</td>
+              <td>{{transaction.stock_value_at_time}}</td>
+              <td>
+                {% if transaction.is_purchase == True %}
+                Purchase
+                {% else %}
+                Sell
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
 
+          </tbody>
       </div>
     </div>
   </div>

@@ -12,12 +12,10 @@ bcrypt = Bcrypt()
 db = SQLAlchemy()
 
 URL = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/get-detail"
-
 HEADERS = {
     'x-rapidapi-host': "apidojo-yahoo-finance-v1.p.rapidapi.com",
     'x-rapidapi-key': keys["rapid_api"]
 }
-
 
 class Transaction(db.Model):
     """Many to many table of transactions made by users, and their associated stock"""
@@ -60,6 +58,16 @@ class Transaction(db.Model):
         db.Boolean,
         nullable=False
     )
+
+    @classmethod
+    def get_user_transactions(cls, user_id):
+        return cls.query \
+            .join(User) \
+            .filter(User.id == user_id) \
+            .join(Stock) \
+            .filter(Stock.id == Transaction.stock_id) \
+            .add_columns(Stock.name, Stock.stock_symbol, Stock.share_price) \
+            .all()
 
     @classmethod
     def generate_transaction(cls, user, stock, amount, is_buy):
@@ -113,6 +121,7 @@ class Owned_Stock(db.Model):
         db.Float,
         nullable=False
     )
+
     @classmethod
     def user_owns_stock(cls, user_id, stock_id):
         """Returns the owned_stock or false if a given user owns a given stock"""
@@ -150,8 +159,7 @@ class Owned_Stock(db.Model):
                 db.session.delete(owned_stock)
             else:
                 owned_stock.quantity -= amount
-                db.session.add(owned_stock)
-                    
+                db.session.add(owned_stock)                
 
     @classmethod
     def get_owned_stock_for_user(cls, user_id):
@@ -163,9 +171,6 @@ class Owned_Stock(db.Model):
             .filter(Stock.id == Owned_Stock.stock_id) \
             .add_columns(Stock.name, Stock.stock_symbol, Stock.share_price) \
             .all()
-
-    
-
 
 class User(db.Model):
     """User in stock trading system"""
@@ -190,8 +195,7 @@ class User(db.Model):
 
     password = db.Column(
         db.Text,
-        # TODO: make false and have seed file generate bcrypt passwords.
-        nullable=True,
+        nullable=False,
     )
 
     current_money = db.Column(
@@ -204,13 +208,6 @@ class User(db.Model):
         db.Float
     )
 
-    # owned_stocks = db.relationship(  # join Owned_stocks table instead with user id to get
-    #     "Stock",  # user owned stocks         #BROKEN 
-    #     secondary="owned_stocks",
-    #     primaryjoin=(id == Owned_Stock.stock_id),
-    #     backref="owned_by"
-    # )
-
     user_transactions = db.relationship(  # TODO rewrite as Transactions @classmethod with joins.
         "Transaction",
         secondary="transactions",
@@ -220,7 +217,9 @@ class User(db.Model):
     )
     
     def buy_stock(self, amount, stock_id):
+        """Buy a stock"""
         stock = Stock.query.get(stock_id)
+
         if self.current_money < (amount * stock.share_price):
             return False                                        #TODO: make exception instead
         else:
@@ -235,11 +234,12 @@ class User(db.Model):
             return True
     
     def sell_stock(self, amount, stock_id):
+        """"Sells a stock that the user owns."""
         stock = Stock.query.get(stock_id)
         owned_stock = Owned_Stock.user_owns_stock(self.id, stock_id)
 
         if owned_stock:
-            if amount > owned_stock.quantity:
+            if amount > owned_stock.quantity:   #prevents negative stocks
                 amount = owned_stock.quantity 
             
             Transaction.generate_transaction(self, stock, amount, False)
@@ -255,6 +255,11 @@ class User(db.Model):
             return False            #TODO: make exceptions instead
 
     def update_asset_value(self):
+        """
+            Sums the value of each stock owned by the user, multiplied by
+            the number of each respective stock that the user owns. 
+            The value is stored as User.total_asset_value
+        """
         stocks = Owned_Stock.get_owned_stock_for_user(self.id)
         dir(stocks)
         val = 0
@@ -262,15 +267,10 @@ class User(db.Model):
             val += (stock.Owned_Stock.quantity * stock.share_price)
         
         self.total_asset_value = val
-        
-
-        
-
 
     @classmethod
     def signup(cls, username, password):
         """Sign up user.
-
             Hashes password and adds user to system.
             """
 
@@ -295,7 +295,6 @@ class User(db.Model):
 
         If can't find a matching user (or if password is wrong), returns False.
         """
-
         user = cls.query.filter_by(username=username).first()
 
         if user:
@@ -304,7 +303,6 @@ class User(db.Model):
                 return user
 
         return False
-
 
 class Stock(db.Model):
     """A comapnies stock that a user can purchase"""
@@ -373,19 +371,15 @@ class Stock(db.Model):
        
         return True
 
-    
-
-#
 def clean_empty(d):
+    """Removes empty entries (entries that evaluate to false) in a dictionary object"""
     if not isinstance(d, (dict, list)):
         return d
     if isinstance(d, list):
         return [v for v in (clean_empty(v) for v in d) if v]
     return {k: v for k, v in ((k, clean_empty(v)) for k, v in d.items()) if v}
 
-
 def connect_db(app):
     """Connect to database."""
-
     db.app = app
     db.init_app(app)
