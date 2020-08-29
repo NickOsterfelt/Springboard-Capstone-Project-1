@@ -8,23 +8,23 @@ db.drop_all()
 db.create_all()
 
 User.query.delete()
-# Stock.query.delete()
+Stock.query.delete()
 Owned_Stock.query.delete()
 Transaction.query.delete()
 
 
 #stocks
 #seed stocks with symbols and names
-# with open('stock_seed_data.csv') as csv_file:
-#     csv_reader = csv.reader(csv_file, delimiter=',')
-#     for row in csv_reader:
-#         s = Stock()
-#         s.stock_symbol = row[0]
-#         s.name = row[1]
-#         s.last_updated = datetime.now()
-#         db.session.add(s)
-# db.session.commit()
-# s = Stock.query.get(1)
+with open('stock_seed_data.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        s = Stock()
+        s.stock_symbol = row[0]
+        s.name = row[1]
+        s.last_updated = datetime.now()
+        db.session.add(s)
+db.session.commit()
+s = Stock.query.get(1)
 
 #users
 u = User.signup("test1", "123456")
@@ -49,6 +49,7 @@ t = Transaction()
 t.user_id = u.id
 t.stock_id = s.id
 t.is_purchase = True
+t.stock_symbol = "AMAT"
 t.stock_value_at_time = 100.00
 t.quantity = 10
 t.time = datetime.now()

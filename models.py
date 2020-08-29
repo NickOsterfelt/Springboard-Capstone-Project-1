@@ -18,7 +18,7 @@ HEADERS = {
 }
 
 class Transaction(db.Model):
-    """Many to many table of transactions made by users, and their associated stock"""
+    """Many to many table of transactions made by users, and the associated stock in the transaction"""
     __tablename__ = "transactions"
 
     id = db.Column(
@@ -37,6 +37,11 @@ class Transaction(db.Model):
         db.Integer,
         db.ForeignKey('stocks.id'),
         primary_key=True
+    )
+
+    stock_symbol = db.Column(
+        db.String(5),
+        nullable=False,
     )
 
     time = db.Column(
@@ -76,7 +81,7 @@ class Transaction(db.Model):
 
         t.user_id = user.id
         t.stock_id = stock.id
-        
+        t.stock_symbol = stock.stock_symbol
         t.is_purchase = True if is_buy else False
         t.quantity = amount
         t.stock_value_at_time = stock.share_price
@@ -162,8 +167,17 @@ class Owned_Stock(db.Model):
                 db.session.add(owned_stock)                
 
     @classmethod
-    def get_owned_stock_for_user(cls, user_id):
+    def get_owned_stock_for_user(cls, user_id, stock_id=0):
         """gets stocks that are owned by users. returns owned_stock objects"""
+        if stock_id != 0:
+            return cls.query \
+            .join(User) \
+            .filter(User.id == user_id) \
+            .join(Stock) \
+            .filter(Stock.id == stock_id) \
+            .add_columns(Stock.name, Stock.stock_symbol, Stock.share_price) \
+            .all()
+
         return cls.query \
             .join(User) \
             .filter(User.id == user_id) \

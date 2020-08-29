@@ -23,8 +23,8 @@
               <th scope="row"><a href="/stocks/{{stock.id}}">{{stock.name}}</a></th>
               <td>{{stock.stock_symbol}}</td>
               <td>{{stock.share_price}}</td>
-              <td>{{stock.stock_symbol}}</td>
-              <td>{{stock.share_price}}</td>
+              <td>{{stock.Owned_Stock.quantity}}</td>
+              <td>{{stock.share_price * stock.Owned_Stock.quantity}}</td>
             </tr>
             {% endfor%}
           </tbody>
@@ -36,29 +36,30 @@
   <div class="col-4">
     <div class="container-fluid" id="home-section">
       <div class="row">
-        <h5 class="display-5 m-3" id="section-header">Leaderboard</h5>
+        <h5 class="display-5 m-3" id="section-header">User Rankings</h5>
         <hr>
-        <table class="table table-striped details p-3">
-          <thead>
-            <tr>
-              <th>Ranking</th>
-              <th>Username</th>
-              <th>Total Asset Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% set count=1 %}
-            {% for user in users_list %}
-            <tr>
-              <td>{{loop.index}}</td>
-              <td>{{user.username}}</td>
-              <td>{{user.total_asset_value}}</td>
-            </tr>
-            {% set count=count+1 %}
-            {% endfor %}
-            
-          </tbody>
-        </table>
+        <div class="user-list">
+          <table class="table table-striped details p-3 m-3 mr-5">
+            <thead>
+              <tr>
+                <th>Ranking</th>
+                <th>Username</th>
+                <th>Total Asset Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% set count=1 %}
+              {% for user in users_list %}
+              <tr>
+                <td>{{loop.index}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.total_asset_value}}</td>
+              </tr>
+              {% set count=count+1 %}
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -68,7 +69,7 @@
     <div class="container-fluid" id="home-section">
       <h5 class="display-5" id="section-header">Transaction History:</h5>
       <hr>
-      <div class="stock-list">
+      <div class="transaction-list">
         <table class="table table-striped">
           <thead>
             <tr>
@@ -82,7 +83,7 @@
 
             {% for transaction in transactions %}
             <tr>
-              <td>{{}}</td>
+              <td>{{transaction.stock_symbol}}</td>
               <td>{{transaction.time}}</td>
               <td>{{transaction.quantity}}</td>
               <td>{{transaction.stock_value_at_time}}</td>

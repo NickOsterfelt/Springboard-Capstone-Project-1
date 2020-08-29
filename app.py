@@ -6,70 +6,41 @@ import datetime
 import json
 import requests
 
+from engine import *
+from constants import * 
 from models import db, connect_db, User, Stock, Owned_Stock, Transaction
-from forms import LoginSignupForm, StockTransactionForm, StockSearchForm, StockTransactionPorfolioForm, UserEditForm
+from forms import LoginSignupForm, StockTransactionForm, StockSearchForm, UserEditForm
 from secrets import keys
-
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///stocks-app'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_ECHO'] = True
+from exceptions import * 
 
 connect_db(app)
 db.create_all()
-
-CURR_USER_KEY = "curr_user"
-
-app.config['SECRET_KEY'] = keys['flask_debug']
-app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
-
 debug = DebugToolbarExtension(app)
 
 #********************** USER ROUTES ******************************
 @app.before_request
 def add_user_to_g():
     """If we're logged in, add curr user to Flask global."""
-
     if CURR_USER_KEY in session:
         g.user = User.query.get(session[CURR_USER_KEY])
-
     else:
         g.user = None
-
-def do_login(user):
-    """Log in user."""
-
-    session[CURR_USER_KEY] = user.id
-
-def do_logout():
-    """Logout user."""
-
-    if CURR_USER_KEY in session:
-        g.user = None
-        del session[CURR_USER_KEY]
-    #else:
-        #exception
-    
 
 @app.route("/")
 def root():
     """Homepage."""
-    if g.user:
-        owned_stocks = Owned_Stock.get_owned_stock_for_user(g.user.id)
-
-        #updates each stock from external API, comment out when testing
-        # update_success = True
-        # for stock in owned_stocks:          #TODO: add loading page maybe? or AJAX requests
-        #     if not Stock.get_update(stock.Owned_Stock.stock_id):
-        #         update_success=False
-        # if not update_success:
-        #     flash("Error Updating stocks from external API", "danger")
-        transactions=User.user_transactions
-        users_list = User.query.order_by(User.total_asset_value).all()
-
-        return render_template('/home.html', owned_stocks=owned_stocks, transactions=transactions, users_list=users_list)
-    else:
+    if not g.user:
         return render_template("home-anon.html")
+
+    owned_stocks = Owned_Stock.get_owned_stock_for_user(g.user.id)
+  
+    # if not update_user_stocks(owned_stocks):     #TOO SLOW and calls external API. Implement with AJAX and load symbols instead
+    #     flash("Error updating stocks from external API")
+
+    transactions= Transaction.query.filter(Transaction.user_id == g.user.id).all()
+    users_list = User.query.order_by(User.total_asset_value).all()
+
+    return render_template('/home.html', owned_stocks=owned_stocks, transactions=transactions, users_list=users_list)    
 
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
@@ -78,6 +49,7 @@ def signup():
     form = LoginSignupForm()
 
     if form.validate_on_submit():
+
         try:
             user = User.signup(
                 username=form.username.data,
@@ -86,6 +58,7 @@ def signup():
         except IntegrityError:
             flash("Username already taken", "danger")
             return render_template('users/signup')
+
         db.session.commit()
         do_login(user)
         return redirect("/")
@@ -124,22 +97,23 @@ def logout():
 @app.route('/users/edit', methods=["GET", "POST"])
 def edit_user():
     """Show edit user form and validate and authenticate submission"""
-    if g.user:
-        form = UserEditForm(ojb=g.user)
-        if form.validate_on_submit():
-            if User.authenticate(g.user.username, form.password.data):
-                g.user.username = form.username.data
-                g.user.image_url = form.img_url.data
-                
-                db.session.commit()
-                return redirect("/")
-            else:
-                flash("Wrong password, try again!", "danger")
-                return redirect('/users/edit')
-        else: 
-            return render_template("/users/edit.html", form=form)
-    else:
+    if not g.user:
         flash("unauthorized access", "danger")
+        return redirect("/")
+        
+    form = UserEditForm(obj=g.user)
+    
+    if form.validate_on_submit():
+
+        if authenticate_user_edit(form):
+            return redirect("/")
+        else:
+            flash("Wrong password, try again!", "danger")
+            return redirect('/users/edit')
+    else: 
+        form.populate_obj(g.user)
+        return render_template("/users/edit.html", form=form)
+        
 
 @app.route('/user/portfolio', methods=["GET", "POST"])
 def show_portfolio():
@@ -147,108 +121,98 @@ def show_portfolio():
         Show current user's owned stocks, and value, valdiates submission 
         of buying and selling stocks
     """
-    if g.user: 
-        form = StockTransactionPorfolioForm()
-        transaction_type = form.transaction_type.data
-        amount = form.amount.data
-
-        stocks = Owned_Stock.get_owned_stock_for_user(g.user.id)
-        stock_ids = [stock.Owned_Stock.stock_id for stock in stocks]
-
-        for stock_id in stock_ids:
-            Stock.get_update(stock_id, True)
-        
-        if form.validate_on_submit():
-            if len(form.data['stock_id']) > 10:
-                raise Exception()               # WTForms does not validate HiddenField() field type
-            stock_id = form.data['stock_id']
-
-            try: 
-                stock_id = int(stock_id)    #try coerce int
-            except ValueError:
-                return redirect("/")
-            
-            if transaction_type == "buy":
-                if g.user.buy_stock(amount, stock_id):
-                    flash("Transaction Successful!", "success")
-                else:
-                    flash("Transaction Failed!", "danger")
-            if transaction_type == "sell":
-                if g.user.sell_stock(amount, stock_id):
-                    flash("Transaction Successful!", "success")
-                else:
-                    flash("Transaction Failed!", "danger")
-            
-            return redirect("/user/portfolio") 
-
-        else:
-            return render_template("/users/portfolio.html",stocks=stocks, form=form)
-    else:
+    if not g.user: 
         flash("Unauthorized Access", "danger")
         return redirect('/')
 
+    form = StockTransactionForm()
+
+    if form.validate_on_submit():
+        try:
+            validate_stock_transaction_form(form)
+        except InvalidFormInput as e:
+            flash(str(e), "danger")
+            return redirect("/")
+
+        stock_id = form.data['stock_id']
+        
+        if do_transaction(form):
+            flash("Transaction Successful!", "success")
+        else:
+            flash("Transaction Failed!", "danger")
+        return redirect("/user/portfolio") 
+
+    else:
+        #stock_ids = [stock.Owned_Stock.stock_id for stock in stocks]
+        #for stock_id in stock_ids:            #Calls API: Extremely slow, add AXIOS request later 
+        #Stock.get_update(stock_id, True)
+
+        stocks = Owned_Stock.get_owned_stock_for_user(g.user.id)
+        return render_template("/users/portfolio.html",stocks=stocks, form=form)
 
 #********************************** STOCK ROUTES ****************************************
 @app.route('/stocks', methods=['GET', 'POST'])
 def show_stocks():
     """Shows search bar for searching stocks by name/symbol. Validates submission."""
-    if g.user:
-        form = StockSearchForm()
+    if not g.user:
+        flash("Unauthorized Access", "danger")
+        return redirect('/')
+   
+    form = StockSearchForm()
 
-        if form.validate_on_submit():
-            input_val = form.search._value()
-            symbol = input_val[input_val.find("(")+1:input_val.find(")")]
-            
-            s = Stock.query.filter(Stock.stock_symbol == symbol).one()
-            
-            return redirect(f'/stocks/{s.id}')
+    if form.validate_on_submit():
+        input_val = form.data['search']
 
-        return render_template("/stocks/index.html", form=form)
+        #processes string
+        symbol = input_val[input_val.rfind("(")+1:input_val.rfind(")")]
 
-    flash("Unauthorized Access", "danger")
-    return redirect('/')
+        s = Stock.query.filter(Stock.stock_symbol == symbol).one()
+        
+        return redirect(f'/stocks/{s.id}')
+
+    return render_template("/stocks/index.html", form=form)
+
+    
         
 @app.route('/stocks/<int:stock_id>', methods=['GET', 'POST'])
 def show_stock(stock_id):
     """Shows stock data of a particular stock. Also alows the user to buy/sell the stock"""
-    if g.user:
-        form = StockTransactionForm()
-        
-        if(form.validate_on_submit()):
-            amount = form.amount.data
-            transaction_type = form.transaction_type.data
-            stock= Stock.query.get(stock_id)
-            value = stock.share_price
+    if not g.user:
+        return redirect('/')
 
-            if transaction_type == "buy":
-                if g.user.buy_stock(amount, stock_id):
-                    flash("Transaction Successful!", "success")
-                else:
-                    flash("Transaction Failed!", "danger")
-
-            if transaction_type == "sell":
-                if g.user.sell_stock(amount, stock_id):
-                    flash("Transaction Successful!", "success")
-                else:
-                    flash("Transaction Failed!", "danger")
-        
-            return redirect(f"/stocks/{stock_id}")
-
+    form = StockTransactionForm()
+    
+    if(form.validate_on_submit()):
+        try:
+            validate_stock_transaction_form(form)
+        except InvalidFormInput as e:
+            flash(str(e), "danger")
+            return redirect("/")
+            
+        if do_transaction(form):
+            flash("Transaction Successful!", "success")
         else:
-            stock = Stock.query.get(stock_id)
-            currently_owned = Owned_Stock.get_owned_stock_for_user(g.user.id)
-            currently_owned = currently_owned[0].Owned_Stock.quantity if currently_owned else 0
-            if not Stock.get_update(stock_id, True):      #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
-            # data = {}
-            # with open('sample.json') as json_file:         #loads sample data
-            #     data = json.load(json_file)                                  
-                flash("Error getting update from external API", "danger")
-                return redirect("/")
+            flash("Transaction Failed!", "danger")
 
-            data = stock.data
-            return render_template('/stocks/details.html', stock=stock, data=data, form=form, currently_owned=currently_owned)  #data will be stock.data when get_update is running
+        return redirect(f"/stocks/{stock_id}")
 
-    return redirect('/')
+    else:
+        stock = Stock.query.get(stock_id)
+        currently_owned = Owned_Stock.get_owned_stock_for_user(g.user.id, stock_id)
+        currently_owned = currently_owned[0].Owned_Stock.quantity if currently_owned else 0
+        
+        #if not Stock.get_update(stock_id, True):
+        if not stock:               #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
+        # data = {}
+        # with open('sample.json') as json_file:         #loads sample data
+        #     data = json.load(json_file)                                  
+            flash("Error getting update from external API", "danger")
+            return redirect("/")
+
+        data = stock.data
+        return render_template('/stocks/details.html', stock=stock, data=data, form=form, currently_owned=currently_owned)  #data will be stock.data when get_update is running
+
+    
 
 # *********************************** API ************************************************
 @app.route('/api/stocks/<int:stock_id>')
@@ -257,11 +221,11 @@ def get_stock_json(stock_id):
         Returns JSON data of a particular stock. Used in javscript Axios 
         for retrieving complete stock data
     """
-    if g.user:
-        stock = Stock.query.get(stock_id)
-        return jsonify(stock.data)
-    else:
+    if not g.user:
         return "unauthorized access", 401
+
+    stock = Stock.query.get(stock_id)
+    return jsonify(stock.data)
 
 @app.route('/api/stocks')
 def get_stock_name_list():
@@ -269,16 +233,18 @@ def get_stock_name_list():
         Returns JSON data of a list of stock names and symbols.
         Used in the javascript Axios get request for autocompletion data.
     """
-    data = []
-    if g.user:
-        stocks = Stock.query.all()
-        for s in stocks:
-            r = f"{s.name} ({s.stock_symbol})"
-            data.append(r)
-        with open('test.txt', 'w') as f:
-            for item in data:
-                f.write("\"%s\","  % item)
-        return jsonify({"stock_names": [data]})
-    else:
+    if not g.user:
         return "unauthorized access", 401
+
+    data = []
+    stocks = Stock.query.all()
+    for s in stocks:
+        r = f"{s.name} ({s.stock_symbol})"
+        data.append(r)
+    with open('test.txt', 'w') as f:
+        for item in data:
+            f.write("\"%s\","  % item)
+    return jsonify({"stock_names": [data]})
+  
+        
 

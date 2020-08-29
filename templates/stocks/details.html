@@ -13,7 +13,13 @@
     <div class="col-8 ">
         <h5 class="display-5 text-light">Description</h5>
         <p class="text-light" id="summary">
-            {{data['summaryProfile']['longBusinessSummary']}}
+            {% if data %}
+                {{data['summaryProfile']['longBusinessSummary']}}
+
+            {% else %}
+                Oh no! Looks like there was a problem getting this stock's data from the external api. Try again later.
+            {% endif %}
+            
         </p>
         <br>
         <div class="container-fluid">
@@ -21,6 +27,9 @@
         </div>
 
     </div>
+    {% if data %}
+
+   
     <div class="col-4 bg-light p-2 rounded">
         <h4 class="display-5 text-dark">Overview</h4>
         <div class="p-1">
@@ -49,7 +58,7 @@
                     </tr>
                 </tbody>
             </table>
-
+            
             <div class="container-fluid mt-3">
                 <span class="user-info mt-2">
                     <p>Current Money: {{g.user.current_money}}</p> 
@@ -57,7 +66,7 @@
                 </span>
                 <h5 class="display-5">Buy/Sell </h5>
                 <form method="POST" id="transaction_form">
-                    {{ form.hidden_tag() }}
+                    {{ form.csrf_token() }}
                     
                     {% for field in form if field.widget.input_type != 'hidden' %}
                     {% for error in field.errors %}
@@ -65,12 +74,14 @@
                     {% endfor %}
 
                     {{ field(placeholder=field.label.text, class="form-control p-1") }}
+                    {{form.stock_id(value=stock.id )}}
                     {% endfor %}
                     
                     <button class="btn btn-primary m-1">Submit</button>
                     
                 </form>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>
