@@ -15,17 +15,9 @@ Transaction.query.delete()
 
 #stocks
 #seed stocks with symbols and names
-with open('stock_seed_data.csv') as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    for row in csv_reader:
-        s = Stock()
-        s.stock_symbol = row[0]
-        s.name = row[1]
-        s.last_updated = datetime.now()
-        db.session.add(s)
-db.session.commit()
-s = Stock.query.get(1)
 
+s = Stock.query.get(1)
+seed_stock_symbol_and_names()
 #users
 u = User.signup("test1", "123456")
 

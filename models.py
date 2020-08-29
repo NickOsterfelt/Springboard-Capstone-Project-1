@@ -219,7 +219,8 @@ class User(db.Model):
     )
 
     total_asset_value = db.Column(
-        db.Float
+        db.Float,
+        default=0
     )
 
     user_transactions = db.relationship(  # TODO rewrite as Transactions @classmethod with joins.
@@ -353,7 +354,7 @@ class Stock(db.Model):
     )
 
     @classmethod
-    def get_update(cls, stock_id, all_data=False):
+    def get_update(cls, stock_id):
         """
             Submits a get request to the yahoo finance api hosted on rapid-api, to get updated data on the stock 
             matching the stock_id. The additional data parameter specifies whether to return an object containing 

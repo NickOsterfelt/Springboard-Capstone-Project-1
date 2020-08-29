@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, flash, redirect, session, jso
 from flask_debugtoolbar import DebugToolbarExtension
 from sqlalchemy.exc import IntegrityError
 
+import os
 import datetime
 import json
 import requests
@@ -13,6 +14,16 @@ from forms import LoginSignupForm, StockTransactionForm, StockSearchForm, UserEd
 from secrets import keys
 from exceptions import * 
 
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = (os.environ.get('DATABASE_URL', 'postgres:///stocks-app'))
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_ECHO'] = True
+
+CURR_USER_KEY = "curr_user"
+
+app.config['SECRET_KEY'] = keys['flask_debug']
+app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 connect_db(app)
 db.create_all()
 debug = DebugToolbarExtension(app)
@@ -145,7 +156,7 @@ def show_portfolio():
     else:
         #stock_ids = [stock.Owned_Stock.stock_id for stock in stocks]
         #for stock_id in stock_ids:            #Calls API: Extremely slow, add AXIOS request later 
-        #Stock.get_update(stock_id, True)
+        #Stock.get_update(stock_id)
 
         stocks = Owned_Stock.get_owned_stock_for_user(g.user.id)
         return render_template("/users/portfolio.html",stocks=stocks, form=form)
@@ -201,7 +212,7 @@ def show_stock(stock_id):
         currently_owned = Owned_Stock.get_owned_stock_for_user(g.user.id, stock_id)
         currently_owned = currently_owned[0].Owned_Stock.quantity if currently_owned else 0
         
-        #if not Stock.get_update(stock_id, True):
+        # if not Stock.get_update(stock_id):
         if not stock:               #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
         # data = {}
         # with open('sample.json') as json_file:         #loads sample data

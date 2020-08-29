@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, flash, redirect, session, jso
 from models import db, connect_db, User, Stock, Owned_Stock, Transaction
 from constants import * 
 from exceptions import * 
+from datetime import datetime
+import csv
 
 def do_login(user):
     """Log in user."""
@@ -80,3 +82,16 @@ def update_user_stocks(owned_stocks):
     if not update_success:
         return False
     return True
+
+
+def seed_stock_symbol_and_names():
+    """Seeds stock database table with names and symbols of each stock."""
+    with open('stock_seed_data.csv') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        for row in csv_reader:
+            s = Stock()
+            s.stock_symbol = row[0]
+            s.name = row[1]
+            s.last_updated = datetime.now()
+            db.session.add(s)
+    db.session.commit()
