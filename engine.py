@@ -94,4 +94,18 @@ def seed_stock_symbol_and_names():
             s.name = row[1]
             s.last_updated = datetime.now()
             db.session.add(s)
+
     db.session.commit()
+
+def clean_empty(d):
+    """Removes empty entries (entries that evaluate to false) in a dictionary object"""
+    if not isinstance(d, (dict, list)):
+        return d
+    if isinstance(d, list):
+        return [v for v in (clean_empty(v) for v in d) if v]
+    return {k: v for k, v in ((k, clean_empty(v)) for k, v in d.items()) if v}
+
+def connect_db(app):
+    """Connect to database."""
+    db.app = app
+    db.init_app(app)

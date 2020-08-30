@@ -2,6 +2,7 @@
 from flask import Flask
 from secrets import keys
 import os
+CURR_USER_KEY = "curr_user"
 
 def setup_app_config():
 
@@ -10,7 +11,7 @@ def setup_app_config():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SQLALCHEMY_ECHO'] = True
 
-    CURR_USER_KEY = "curr_user"
+    
 
     app.config['SECRET_KEY'] = keys['flask_debug']
     app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False

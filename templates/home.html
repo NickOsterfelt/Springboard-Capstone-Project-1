@@ -53,7 +53,7 @@
               <tr>
                 <td>{{loop.index}}</td>
                 <td>{{user.username}}</td>
-                <td>{{user.total_asset_value}}</td>
+                <td>{{user.total_asset_value + user.current_money}}</td>
               </tr>
               {% set count=count+1 %}
               {% endfor %}
@@ -89,7 +89,7 @@
               <td>{{transaction.stock_value_at_time}}</td>
               <td>
                 {% if transaction.is_purchase == True %}
-                Purchase
+                Buy
                 {% else %}
                 Sell
                 {% endif %}

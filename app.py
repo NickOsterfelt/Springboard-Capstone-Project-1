@@ -212,8 +212,8 @@ def show_stock(stock_id):
         currently_owned = Owned_Stock.get_owned_stock_for_user(g.user.id, stock_id)
         currently_owned = currently_owned[0].Owned_Stock.quantity if currently_owned else 0
         
-        # if not Stock.get_update(stock_id):
-        if not stock:               #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
+        if not Stock.get_update(stock_id): #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
+        # if not stock:               
         # data = {}
         # with open('sample.json') as json_file:         #loads sample data
         #     data = json.load(json_file)                                  

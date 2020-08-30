@@ -1,12 +1,14 @@
 
 
 {% extends 'base-home.html' %}
+
+{% block links %} <link rel="stylesheet" href="/static/stylesheets/user-edit.css">{% endblock %}
 {% block page_class %} user-form {% endblock %}
 
 {% block content %}
 
 
-<div class="row d-flex justify-content-center align-items-center user-form-contianer mt-5">
+<div class="row d-flex justify-content-center align-items-center user-form-contianer mt-1">
     <div class="col-md-7 col-lg-5">
         <div class="user-form-container">
             <form method="POST" id="user_form">
@@ -32,7 +34,7 @@
             
                 <div class="edit-btn-area pt-2">
                   <button class="btn btn-success">Edit this user!</button>
-                  <a href="/users/{{ user_id }}" class="btn btn-outline-dark">Cancel</a>
+                  <a href="/users/{{ user_id }}" class="btn btn-outline-light">Cancel</a>
             </div>
             
         </div>

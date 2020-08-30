@@ -76,6 +76,9 @@ body{
     border-radius: 1%;
     overflow-y: scroll;
 }
+#home-section table{
+    text-align: center;
+}
 #home-section thead{
     background: #0000009d;
     color: white;
@@ -91,5 +94,8 @@ body{
 }
 .table thead tr{
     background: #363636;
+}
+.navbar-nav{
+    align-items: center;
 }
 
