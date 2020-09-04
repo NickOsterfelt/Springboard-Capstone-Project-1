@@ -28,7 +28,6 @@ class StockModelTestCase(TestCase):
     def setUp(self):
         
         s = Stock.query.get(1)
-
         self.stock = s
 
     def tearDown(self):
@@ -64,6 +63,8 @@ class StockModelTestCase(TestCase):
             self.assertNotEqual(before.last_updated, after.last_updated)
         else:
             self.fail("Problem retrieving data from external API")
+
+    def 
 
         
 

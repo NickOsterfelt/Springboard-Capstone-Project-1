@@ -276,12 +276,13 @@ class User(db.Model):
             The value is stored as User.total_asset_value
         """
         stocks = Owned_Stock.get_owned_stock_for_user(self.id)
-        dir(stocks)
         val = 0
         for stock in stocks:
             val += (stock.Owned_Stock.quantity * stock.share_price)
         
         self.total_asset_value = val
+        db.session.add(self)
+        db.session.commit()
 
     @classmethod
     def signup(cls, username, password):

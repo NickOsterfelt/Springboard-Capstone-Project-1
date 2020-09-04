@@ -1,7 +1,7 @@
 import os
 from unittest import TestCase
 from sqlalchemy import exc
-from engine import seed_stock_symbol_and_names
+from ..engine import seed_stock_symbol_and_names
 from datetime import datetime
 
 from models import db, User, Stock, Owned_Stock, Transaction

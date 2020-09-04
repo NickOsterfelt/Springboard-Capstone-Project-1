@@ -7,12 +7,12 @@ import datetime
 import json
 import requests
 
-from engine import *
-from constants import * 
+from engine.engine import *
+from engine.constants import * 
 from models import db, connect_db, User, Stock, Owned_Stock, Transaction
 from forms import LoginSignupForm, StockTransactionForm, StockSearchForm, UserEditForm
 from secrets import keys
-from exceptions import * 
+from engine.exceptions import * 
 
 
 app = Flask(__name__)
@@ -49,8 +49,8 @@ def root():
     #     flash("Error updating stocks from external API")
 
     transactions= Transaction.query.filter(Transaction.user_id == g.user.id).all()
-    users_list = User.query.order_by(User.total_asset_value).all()
-
+    users_list = User.query.order_by(User.total_asset_value.desc()).all()
+    
     return render_template('/home.html', owned_stocks=owned_stocks, transactions=transactions, users_list=users_list)    
 
 @app.route("/signup", methods=['GET', 'POST'])
@@ -85,7 +85,7 @@ def login():
 
     if form.validate_on_submit():
         user = User.authenticate(form.username.data, form.password.data)
-
+            
         if user:
             do_login(user)
             flash(f"Hello, {user.username}, login successful!", "success")
@@ -154,9 +154,10 @@ def show_portfolio():
         return redirect("/user/portfolio") 
 
     else:
-        #stock_ids = [stock.Owned_Stock.stock_id for stock in stocks]
-        #for stock_id in stock_ids:            #Calls API: Extremely slow, add AXIOS request later 
-        #Stock.get_update(stock_id)
+        g.user.update_asset_value()
+        # stock_ids = [stock.Owned_Stock.stock_id for stock in stocks]
+        # for stock_id in stock_ids:            #Calls API: Extremely slow, add AXIOS request later 
+        #     Stock.get_update(stock_id)
 
         stocks = Owned_Stock.get_owned_stock_for_user(g.user.id)
         return render_template("/users/portfolio.html",stocks=stocks, form=form)

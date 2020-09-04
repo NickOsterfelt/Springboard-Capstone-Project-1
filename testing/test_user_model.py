@@ -1,14 +1,18 @@
-import os
+import sys, os
 from unittest import TestCase
 from sqlalchemy import exc
-from ..engine import seed_stock_symbol_and_names
 from datetime import datetime
 
-from ..models import db, User, Stock, Owned_Stock, Transaction
+from models import db, User, Stock, Owned_Stock, Transaction
+import engine
+
+
+# from '../models' import db, User, Stock, Owned_Stock, Transaction
 
 # run these tests like:
 #
-#    python -m unittest test_user_model.py
+#    python -m unittest testing/test_user_model.py
+
 os.environ['DATABASE_URL'] = "postgresql:///stocks-app-test"
 
 from app import app

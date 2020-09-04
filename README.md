@@ -3,7 +3,7 @@ A stock trading game part of Springboard's Carreer Track Software Development pr
 
 ## Schema 
 
-![schema](schema.PNG)
+![schema](util/schema.PNG)
 
 <em>Made using dbdesigner.net</em>
 
