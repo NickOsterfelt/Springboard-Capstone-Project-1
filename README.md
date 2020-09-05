@@ -40,13 +40,13 @@ Yahoo finance rapid-api: https://rapidapi.com/apidojo/api/yahoo-finance1
 * Users can use the navbar to access various links including a search page for stocks, a portfolio management page, and account options.
 
 ###### Buying/selling stocks
-* accessing the "/stocks" route provides a search page where a searchbar is provided with autocompletion to search for stocks that are available to buy/sell.
+* Accessing the "/stocks" route provides a search page where a searchbar is provided with autocompletion to search for stocks that are available to buy/sell.
 * Submiting the search form redirects to a particular companies' details page ("/stocks/id").
 
 	* here the given stock data is optionally updated as well based on the app_config table.
 	* users can buy and sell stock here provided they have the assets available to do so.
 
-* additionally the user can buy and sell their currently owned stock through the portfolio management page, where infomration about the user's currently owned stocks are displayed.
+* Additionally the user can buy and sell their currently owned stock through the portfolio management page, where infomration about the user's currently owned stocks are displayed.
 
 
 
