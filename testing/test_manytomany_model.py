@@ -1,7 +1,7 @@
 import os
 from unittest import TestCase
 from sqlalchemy import exc
-from ..engine import seed_stock_symbol_and_names
+from engine.engine import seed_stock_symbol_and_names, setup_app_config
 from datetime import datetime
 
 from models import db, User, Stock, Owned_Stock, Transaction
@@ -11,6 +11,8 @@ os.environ['DATABASE_URL'] = "postgresql:///stocks-app-test"
 from app import app
 
 db.create_all()
+
+setup_app_config()
 
 class TransactionModelTestCase(TestCase):
 

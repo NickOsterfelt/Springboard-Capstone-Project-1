@@ -341,6 +341,7 @@ class Stock(db.Model):
         nullable=False,
         unique=True
     )
+
     data = db.Column(
         db.JSON,
         nullable=False,
@@ -386,6 +387,46 @@ class Stock(db.Model):
         db.session.commit()
        
         return True
+
+class App_Config(db.Model):
+    """
+        Model for app config variables which can be altered or 
+        toggled on/off though the ORM and DBMS
+    """
+    __tablename__ = "app_config"
+
+    id = db.Column(
+        db.Integer,
+        primary_key=True,
+        autoincrement=True
+    )
+
+    name = db.Column(
+        db.String(20),
+        nullable=False
+    )
+
+    value = db.Column(
+        db.Text
+    )
+
+    toggle = db.Column(
+        db.Boolean
+    )
+
+    @classmethod
+    def toggle_large_updates(cls):
+        var = cls.query.get(1)
+        var.toggle = False if var.toggle else True
+        db.session.add(var)
+        db.session.commit()
+
+    @classmethod
+    def toggle_small_updates(cls):
+        var = cls.query.get(2)
+        var.toggle = False if var.toggle else True
+        db.session.add(var)
+        db.session.commit()
 
 def clean_empty(d):
     """Removes empty entries (entries that evaluate to false) in a dictionary object"""

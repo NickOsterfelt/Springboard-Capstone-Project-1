@@ -9,21 +9,22 @@ import requests
 
 from engine.engine import *
 from engine.constants import * 
-from models import db, connect_db, User, Stock, Owned_Stock, Transaction
+from models import db, connect_db, User, Stock, Owned_Stock, Transaction, App_Config
 from forms import LoginSignupForm, StockTransactionForm, StockSearchForm, UserEditForm
 from secrets import keys
 from engine.exceptions import * 
 
-
+# app = setup_app_config()
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = (os.environ.get('DATABASE_URL', 'postgres:///stocks-app'))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
+app.config['SECRET_KEY'] = keys['flask_debug']
+app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
 CURR_USER_KEY = "curr_user"
 
-app.config['SECRET_KEY'] = keys['flask_debug']
-app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+
 connect_db(app)
 db.create_all()
 debug = DebugToolbarExtension(app)
@@ -45,8 +46,10 @@ def root():
 
     owned_stocks = Owned_Stock.get_owned_stock_for_user(g.user.id)
   
-    # if not update_user_stocks(owned_stocks):     #TOO SLOW and calls external API. Implement with AJAX and load symbols instead
-    #     flash("Error updating stocks from external API")
+    update_toggle = App_Config.query.get(1)
+
+    if update_toggle.toggle and not update_user_stocks(owned_stocks):     #TOO SLOW and calls external API. Implement with AJAX and load symbols instead
+        flash("Error updating stocks from external API")
 
     transactions= Transaction.query.filter(Transaction.user_id == g.user.id).all()
     users_list = User.query.order_by(User.total_asset_value.desc()).all()
@@ -154,12 +157,16 @@ def show_portfolio():
         return redirect("/user/portfolio") 
 
     else:
-        g.user.update_asset_value()
-        # stock_ids = [stock.Owned_Stock.stock_id for stock in stocks]
-        # for stock_id in stock_ids:            #Calls API: Extremely slow, add AXIOS request later 
-        #     Stock.get_update(stock_id)
-
         stocks = Owned_Stock.get_owned_stock_for_user(g.user.id)
+        g.user.update_asset_value()
+        
+        update_toggle = App_Config.query.get(1)
+        if update_toggle.toggle:
+            stock_ids = [stock.Owned_Stock.stock_id for stock in stocks]
+            for stock_id in stock_ids:            #Calls API: Extremely slow, add AXIOS request later 
+                Stock.get_update(stock_id)
+
+        
         return render_template("/users/portfolio.html",stocks=stocks, form=form)
 
 #********************************** STOCK ROUTES ****************************************
@@ -213,13 +220,17 @@ def show_stock(stock_id):
         currently_owned = Owned_Stock.get_owned_stock_for_user(g.user.id, stock_id)
         currently_owned = currently_owned[0].Owned_Stock.quantity if currently_owned else 0
         
-        if not Stock.get_update(stock_id): #WARNING CALLS EXTERNAL API, ENABLE LATER when done testing
-        # if not stock:               
-        # data = {}
-        # with open('sample.json') as json_file:         #loads sample data
-        #     data = json.load(json_file)                                  
-            flash("Error getting update from external API", "danger")
-            return redirect("/")
+        update_toggle = App_Config.query.get(2)
+        
+        if update_toggle.toggle:
+
+            try:
+                Stock.get_update(stock_id)
+            except:                                 
+                flash("Error getting update from external API", "danger")
+        else:
+            with open('util/sample.json') as json_file:         #loads sample data
+                stock.data = json.load(json_file)
 
         data = stock.data
         return render_template('/stocks/details.html', stock=stock, data=data, form=form, currently_owned=currently_owned)  #data will be stock.data when get_update is running

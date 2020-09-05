@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash, redirect, session, jsonify, g
-from models import db, connect_db, User, Stock, Owned_Stock, Transaction
+from models import db, connect_db, User, Stock, Owned_Stock, Transaction, App_Config
 from engine.constants import * 
 from engine.exceptions import * 
 from datetime import datetime
@@ -83,10 +83,9 @@ def update_user_stocks(owned_stocks):
         return False
     return True
 
-
 def seed_stock_symbol_and_names():
     """Seeds stock database table with names and symbols of each stock."""
-    with open('stock_seed_data.csv') as csv_file:
+    with open('util/stock_seed_data.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         for row in csv_reader:
             s = Stock()
@@ -104,6 +103,12 @@ def clean_empty(d):
     if isinstance(d, list):
         return [v for v in (clean_empty(v) for v in d) if v]
     return {k: v for k, v in ((k, clean_empty(v)) for k, v in d.items()) if v}
+
+def setup_app_config():
+    a = App_Config(name="GET_LARGE_UPDATES", toggle=False)  
+    b = App_Config(name="GET_SMALL_UPDATES", toggle=False) 
+    db.session.add_all([a,b])
+    db.session.commit()
 
 def connect_db(app):
     """Connect to database."""

@@ -3,8 +3,8 @@ from unittest import TestCase
 from sqlalchemy import exc
 from datetime import datetime
 
-from models import db, User, Stock, Owned_Stock, Transaction
-import engine
+from models import db, User, Stock, Owned_Stock, Transaction, App_Config
+from engine.engine import setup_app_config
 
 
 # from '../models' import db, User, Stock, Owned_Stock, Transaction
@@ -20,6 +20,8 @@ from app import app
 db.create_all()
 
 db.session.commit()
+
+setup_app_config()
 
 class UserModelTestCase(TestCase):
     """Tests user model"""
