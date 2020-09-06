@@ -110,6 +110,15 @@ def setup_app_config():
     db.session.add_all([a,b])
     db.session.commit()
 
+def clean_empty(d):
+    """Removes empty entries (entries that evaluate to false) in a dictionary object"""
+    if not isinstance(d, (dict, list)):
+        return d
+    if isinstance(d, list):
+        return [v for v in (clean_empty(v) for v in d) if v]
+    return {k: v for k, v in ((k, clean_empty(v)) for k, v in d.items()) if v}
+
+
 def connect_db(app):
     """Connect to database."""
     db.app = app

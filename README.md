@@ -22,11 +22,11 @@ Yahoo finance rapid-api: https://rapidapi.com/apidojo/api/yahoo-finance1
 * This api is used for getting frequently updated and current data on stocks. Config variables stored in the database in the app_config table toggle when stocks are updated in view functions defined in [app.py](/app.py). I chose this API on the basis that it is very difficult to get current and frequently udpdated stock data for free. In the future, I would hope to make use of the Quandl api's time series data to display graphs and price history of stocks to the user, however this would require paying for the service for current data.
 
 ## Important features
-* **Gets real stocks data based on the current time.**
+* **Gets real and current stock data from external API.**
 	* It was important to me to include this due to the multiplayer aspect of the application. If I had used past stock data someone could simply look up the price history of a given stock.
 * **Secure user authentication, password encryption, and form validation.**
 	* A core part of every web application. Demonstrating my knowledge of these features a project intended to be deployed and functioning with multiple users is must.
-* **Parsing large and detailed JSON responses from the external API, and displaying it to the user**
+* **Parsing large and detailed JSON responses from the external API, and displaying data to the user**
 	* The amount of data for a given stock, at a given minute in time, provided by the external API response is very detailed. It was a challenge to extract the data needed, handle mising keys, and then display the information in a coincise format to the user. However, I felt it was important to provide the option for the user to see any data that the API provided.
 
 
